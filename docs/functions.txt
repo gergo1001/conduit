@@ -1,0 +1,12 @@
+regisztráció: az alkalmazásba be lehet regisztrálni, név, emailcím és jelszó megadásával
+bejelentkezés: az alkalmazásba be lehet jelentkezni egy meglévő felhasználói fiókkal
+cikket lehet olvasni: bejelentkezés után cikkek közül lehet választani, egy kiválasztása után olvasható a teljes cikk
+cikkhez lehet kommentelni: a kiválasztott cikknél lehet kommentelni
+tag-hez tartozó cikkeket lehet listázni: popular tags résznél adott tagre kattintva az azzal jelölt cikkek olvashatóak (ez nem működik jól)
+új cikket lehet létrehozni: new article-re kattintva új cikk hozható létre
+nick nevet lehet változtatni: settings-re kattintva megváltoztathatóak a felhasználó adatai, így a nick neve is
+főoldal behozása: mind a condit feliratra kattintva, mind a home-ra kattintva a főképernyő jön be újra
+cikket lehet szerkeszteni: saját cikk behozatala után megjelenik az edit article gomb, ezt megnyomva szerkeszthető a cikk
+cikket lehet törölni: saját cikk behozatala után mejelenik a delete article gomb, amivel törölhető a cikk
+lehet kedvelni cikket: más cikkének a kiválasztásánál megjelenik a favorite article, amivel kedvelni lehet (de ez a kedvelés nem jelenik meg a saját oldalon a favorite article résznél, illetve nem is lehet normélisan kiválasztani, mind a favorited, mind a 's article aktív marad)
+ki lehet jelentkezni: log out-ra kattintva a felhasználó kijelentkezik

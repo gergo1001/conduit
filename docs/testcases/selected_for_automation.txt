@@ -1,0 +1,10 @@
+A001,CON_TC01,regisztráció: felület tesztelés, mert gyakran kell ismételni, fontos, hogy a felületen mi jelenik meg
+A002,CON_TC02, bejelentkezés: felület tesztelés, mert gyakran kell ismételni, fontos, hogy a felületen mi jelenik meg
+A003,CON_TC03,cikkhez lehet olvasni: manuális teszt, mert a megjelenítés helyességét nehéz lenne automatizálva ellenőrizni.
+A004,CON_TC04,cikket lehet kommentelni: felület tesztelés, mert a komment helyes megjelenése annyira nem fontos
+A005,CON_TC05,tag-hez tartozó cikkeket lehet listázni,se a manuális, se a felület nem ideális, manuálissal nehezen ellenőrizhető, mert könnyen tévedhet a tesztelő, felület teszteléssel meg szontén nehezen vagy talán nem is leproramozható (legalábbis seleniummal)
+A006,CON_TC06,cikket lehet létrehozni: felülettesztelés, mert főfunkció, ezért nagyon gyakran kellene tesztelni
+A007,CON_TC07,nick nevet lehet változtatni: manuális, nem jelentős funkció, és kicsi az esély, hogy elromlik, ezért nem kell gyakran tesztelni
+A008,CON_TC08,főoldal behozása  manuális, nem jelentős funkció, és kicsi az esély, hogy elromlik, ezért nem kell gyakran tesztelni
+A009,CON_TC09,cikket lehet törölni:felülettesztelés, mert főfunkció, ezért nagyon gyakran kellene tesztelni
+A010,CON_TC10,ki lehet jelentkezni: felülettesztelés, mert főfunkció, ezért nagyon gyakran kellene tesztelni

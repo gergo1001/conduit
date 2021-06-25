@@ -16,20 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Builds and Starts
-        run: |
-          docker-compose up -d
-
-      - name: Run Integration Tests
-        run: |
-          docker-compose up -d
-          docker exec realworld_drash deno test -A --unstable tests/integration/test.ts
-
-      - name: Run Unit Tests
-        run: |
-          docker-compose up -d
-          docker exec realworld_drash deno test -A --unstable tests/unit/models/base_model_test.ts
       - name: install Nodejs
 	  uses: actions/setup-node@v2
 	  with:
@@ -45,6 +31,9 @@ jobs:
       - name: Install chromedriver
 	  run: |
 	    seleniumbase install chromedriver
+      - name: Builds and Starts
+        run: |
+          docker-compose up -d
       - name: Run Tests
      	  run: |
             selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" ./seleniumide-tests/registration.side

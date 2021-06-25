@@ -21,9 +21,7 @@ jobs:
       - name: Builds and Starts
         run: |
           docker-compose up -d
-      - name: Run Tests
-     	run: |
-          selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[disable-infobars, headless]" ./seleniumide-tests/registration.side
+      
   linter:
       # Only one OS is required since fmt is cross platform
     runs-on: ubuntu-latest

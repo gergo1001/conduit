@@ -30,6 +30,15 @@ jobs:
       run: sleep 75s
       shell: bash
 
+    - name: Test with pytest
+      run: |
+        pytest --alluredir=allure-results
+        
+
+    - name: Collect docker logs
+      uses: jwalton/gh-docker-logs@v1
+      with:
+        dest: './logs'
     - name: Get Allure history
       uses: actions/checkout@v2
       if: always()
@@ -54,11 +63,3 @@ jobs:
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
 
-    - name: Test with pytest
-      run: |
-        pytest --alluredir=allure-results
-        
-    - name: Collect docker logs
-      uses: jwalton/gh-docker-logs@v1
-      with:
-        dest: './logs'

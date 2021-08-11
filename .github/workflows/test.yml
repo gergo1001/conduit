@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        if [ -f tests/requirements.txt ]; then pip install -r tests/requirements.txt; fi
+        if [ -f test_phyton/requirements.txt ]; then pip install -r tests/requirements.txt; fi
     - name: Install Chrome
       run: |
         sudo apt install google-chrome-stable

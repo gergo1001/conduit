@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        /opt/hostedtoolcache/Python/3.9.5/x64/bin/python -m pip install --upgrade pip
+        python -m pip install --upgrade pip
         if [ -f test_phyton/requirements.txt ]; then pip install -r test_phyton/requirements.txt; fi
     - name: Install Chrome
       run: |
@@ -30,11 +30,33 @@ jobs:
       run: sleep 75s
       shell: bash
 
+    - name: Get Allure history
+      uses: actions/checkout@v2
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
 
+    - name: Allure Report action from marketplace
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      with:
+        allure_results: allure-results
+        allure_history: allure-history
+        keep_reports: 20
+
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history
 
     - name: Test with pytest
       run: |
-        pytest
+        pytest --alluredir=allure-results
         
     - name: Collect docker logs
       uses: jwalton/gh-docker-logs@v1

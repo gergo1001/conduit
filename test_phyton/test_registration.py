@@ -9,7 +9,7 @@ def test_registration():
     URL = "http://localhost:1667/"
     options = Options()
     options.headless = True
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install(),options=browser_options)
     driver.get(URL)
 
     link=driver.find_element_by_xpath('//li[@class="nav-item"]/a[@href="#/register"]')

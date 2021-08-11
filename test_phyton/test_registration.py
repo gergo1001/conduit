@@ -7,8 +7,9 @@ from selenium.webdriver.chrome.options import Options
 def test_registration():
 
     URL = "http://localhost:1667/"
-    options = Options()
-    options.headless = True
+    browser_options = Options()
+    browser_options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    browser_options.headless = True
     driver = webdriver.Chrome(ChromeDriverManager().install(),options=browser_options)
     driver.get(URL)
 

@@ -36,7 +36,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest  --alluredir=allure-results
+        pytest
         
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
@@ -53,3 +53,8 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+
+    - name: Collect docker logs
+      uses: jwalton/gh-docker-logs@v1
+      with:
+        dest: './logs'

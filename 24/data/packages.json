@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test_phyton.test_registration",
+    "children" : [ {
+      "name" : "test_registration",
+      "uid" : "fa4f0829615bd484",
+      "parentUid" : "55ee4d6ac604543b317998a25e334a9e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628697913056,
+        "stop" : 1628697919378,
+        "duration" : 6322
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_phyton.test_registration"
+  } ],
+  "name" : "packages"
+}

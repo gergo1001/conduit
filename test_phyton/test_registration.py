@@ -5,11 +5,11 @@ from selenium.webdriver.chrome.options import Options
 # In order for ChromeDriverManager to work you must pip install it in your own environment.
 
 def test_registration():
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+
     URL = "http://localhost:1667/"
     options = Options()
     options.headless = True
-
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get(URL)
 
     link=driver.find_element_by_xpath('//li[@class="nav-item"]/a[@href="#/register"]')

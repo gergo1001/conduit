@@ -1,0 +1,11 @@
+[ {
+  "uid" : "ea7f5e19480cab12",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629029396280,
+    "stop" : 1629029403178,
+    "duration" : 6898
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

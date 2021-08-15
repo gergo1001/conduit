@@ -3,19 +3,18 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
 import pages.page_registration as p
-import pages.main as m
+import pages.page_main as m
 
 
 # In order for ChromeDriverManager to work you must pip install it in your own environment.
 
 
 def test_registration():
-
     URL = "http://localhost:1667/"
 
-    p_main=m.PageMain()
+    p_main = m.PageMain()
     p_main.open()
-
+    p_main.regpage_open()
     time.sleep(20)
     # driver.close()
 

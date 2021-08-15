@@ -14,7 +14,8 @@ def test_registration():
 
     p_main = m.PageMain()
     p_main.open()
-    p_main.regpage_open()
+    p_reg=p_main.regpage_open()
+    p_reg.fill_inputs('h','a','b')
     time.sleep(20)
     # driver.close()
 

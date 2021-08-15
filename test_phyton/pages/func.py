@@ -1,5 +1,5 @@
-webpage_lathato=True
+webpage_visible=False
 
-def input_element(driver,type,eleres):
+def input_element(driver,type,path):
     if type=='xpath':
-        return driver.find_element_by_xpath(eleres)
+        return driver.find_element_by_xpath(path)

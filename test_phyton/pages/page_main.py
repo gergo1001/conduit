@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pages.func as f
+import page_registration as p
 
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -11,8 +12,8 @@ class PageMain():
     driver = None
 
     def __init__(self):
-        if not f.webpage_lathato:
-
+        if not f.webpage_visible:
+            browser_options = Options()
             browser_options.add_experimental_option("excludeSwitches", ["enable-logging"])
             browser_options.headless = True
             self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
@@ -27,7 +28,9 @@ class PageMain():
 
     def regpage_open(self):
         self.driver.find_element_by_xpath('//li[@class="nav-item"]/a[@href="#/register"]').click()
+        return p.PageRegistration(self.driver)
 
     def __del__(self):
-        self.driver.close()
+        if f.webpage_visible:
+            self.driver.close()
         self.driver.quit()

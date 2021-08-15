@@ -6,12 +6,7 @@ import pages.func as f
 
 from webdriver_manager.chrome import ChromeDriverManager
 
-#def welcome_ok(brow):
-#    welcome_text = brow.find_element_by_xpath('/html/body/div[2]/div/div[2]').text
-#    assert welcome_text == "Welcome!"
-#    welcome_button = brow.find_element_by_xpath('/html/body/div[2]/div/div[4]/div/button')
-#    welcome_button.click()
-#    wait(brow, By.XPATH, '//div[@id="app"]/nav/div/ul/li[4]/a', 1)
+
 
 
 class PageRegistration():

@@ -15,12 +15,17 @@ def test_registration():
     p_main = m.PageMain()
     p_main.open()
     p_reg = p_main.regpage_open()
+
+    p_reg.fill_inputs(f.random_user(), "", f.random_pass())
+    p_reg.click_registration()
+    assert p_reg.good_message_missing_email == p_reg.get_message()
+
     p_reg.fill_inputs(f.random_user(), f.random_email(), f.random_pass())
     p_reg.click_registration()
     assert p_reg.good_message_ok == p_reg.get_message()
 
-    p_main.__del__()
 
+    p_main.__del__()
 
 
 

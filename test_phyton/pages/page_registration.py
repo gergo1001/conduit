@@ -17,6 +17,7 @@ class PageRegistration():
     message_text_xpath='/html/body/div[2]/div/div[2]'
     message_ok_xpath='/html/body/div[2]/div/div[4]/div/button'
     good_message_ok='Welcome!'
+    good_message_missing_email='Registration failed!'
     def __init__(self, driver=None):
         if driver == None:
             options = Options()
@@ -25,8 +26,11 @@ class PageRegistration():
         self.driver : webdriver = driver
 
     def fill_inputs(self, user, email, passw):
+        f.inputelement(self.driver, self.user_input[0], self.user_input[1]).clear()
         f.inputelement(self.driver, self.user_input[0], self.user_input[1]).send_keys(user)
+        f.inputelement(self.driver, self.email_input[0], self.email_input[1]).clear()
         f.inputelement(self.driver, self.email_input[0], self.email_input[1]).send_keys(email)
+        f.inputelement(self.driver, self.passw_input[0], self.passw_input[1]).clear()
         f.inputelement(self.driver, self.passw_input[0], self.passw_input[1]).send_keys(passw)
 
     def click_registration(self):

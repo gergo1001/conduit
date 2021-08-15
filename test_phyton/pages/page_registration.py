@@ -21,3 +21,12 @@ class PageRegistration():
         f.input_element(self.driver, self.user_input[0], self.user_input[1]).send_keys(user)
         f.input_element(self.driver, self.email_input[0], self.email_input[1]).send_keys(email)
         f.input_element(self.driver, self.passw_input[0], self.passw_input[1]).send_keys(passw)
+
+
+    # def van_hibauzenet():
+    #    hibauzenetek = driver.find_elements_by_xpath('/html/body/div[2]')
+    #    if len(hibauzenetek) > 0:
+    #        assert 1 == 1
+    #        hibauzenetek[0].find_element_by_tag_name('button').click()
+    #    else:
+    #        assert 1 == 0

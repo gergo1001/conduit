@@ -10,12 +10,10 @@ import pages.page_main as m
 
 
 def test_registration():
-    URL = "http://localhost:1667/"
-
     p_main = m.PageMain()
     p_main.open()
-    p_reg=p_main.regpage_open()
-    p_reg.fill_inputs('h','a','b')
+    p_reg = p_main.regpage_open()
+    p_reg.fill_inputs('h', 'a', 'b')
     time.sleep(20)
     # driver.close()
 

@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pages.func as f
-import page_registration as p
+import pages.page_registration as p
 
 from webdriver_manager.chrome import ChromeDriverManager
 

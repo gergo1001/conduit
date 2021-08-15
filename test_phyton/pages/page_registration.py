@@ -18,9 +18,9 @@ class PageRegistration():
         self.driver = driver
 
     def fill_inputs(self, user, email, passw):
-        f.input_element(self.driver, self.user_input[0], self.user_input[1]).send_keys(user)
-        f.input_element(self.driver, self.email_input[0], self.email_input[1]).send_keys(email)
-        f.input_element(self.driver, self.passw_input[0], self.passw_input[1]).send_keys(passw)
+        f.inputelement(self.driver, self.user_input[0], self.user_input[1]).send_keys(user)
+        f.inputelement(self.driver, self.email_input[0], self.email_input[1]).send_keys(email)
+        f.inputelement(self.driver, self.passw_input[0], self.passw_input[1]).send_keys(passw)
 
 
     # def van_hibauzenet():

@@ -1,5 +1,6 @@
-webpage_visible=False
+webpage_visible = True
 
-def input_element(driver,type,path):
-    if type=='xpath':
+
+def inputelement(driver, type, path):
+    if type == 'xpath':
         return driver.find_element_by_xpath(path)

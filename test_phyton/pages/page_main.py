@@ -31,6 +31,6 @@ class PageMain():
         return p.PageRegistration(self.driver)
 
     def __del__(self):
-        if f.webpage_visible:
-            self.driver.close()
+        #if f.webpage_visible:
+        #    self.driver.close()
         self.driver.quit()

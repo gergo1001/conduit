@@ -10,22 +10,38 @@ import pages.func as f
 
 # In order for ChromeDriverManager to work you must pip install it in your own environment.
 
-
+#sign up, logout, login funkció tesztelése
 def test_registration():
     p_main = m.PageMain()
     p_main.open()
     p_reg = p_main.regpage_open()
 
+    #regisztráció üres email cimmel
     p_reg.fill_inputs(f.random_user(), "", f.random_pass())
     p_reg.click_registration()
     assert p_reg.good_message_missing_email == p_reg.get_message()
-
-    p_reg.fill_inputs(f.random_user(), f.random_email(), f.random_pass())
+    #regisztráció helyes adatokkal
+    user = f.random_user()
+    email=f.random_email()
+    password=f.random_pass()
+    p_reg.fill_inputs(user, email , password)
     p_reg.click_registration()
     assert p_reg.good_message_ok == p_reg.get_message()
+    time.sleep(4)
+    assert True == p_main.get_user_sign_in(user)
+    # kijelentkezés
+    p_main.logout_click()
+    time.sleep(3)
+    assert False == p_main.get_user_sign_in(user)
+
+    #bejelentkezés
+    p_signin=p_main.signinpage_open()
+    p_signin.fill_inputs(email,password)
+    p_signin.click_signin()
+    time.sleep(4)
+    assert True == p_main.get_user_sign_in(user)
 
 
     p_main.__del__()
-
 
 

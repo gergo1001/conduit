@@ -12,7 +12,7 @@ class PageEditor():
     shorttext_input = ['xpath', '//input[@placeholder="What\'s this article about?"]']
     text_input = ['xpath', '//fieldset/textarea[@placeholder="Write your article (in markdown)"]']
     tags_input = ['xpath', "//input[@placeholder='Enter tags']"]
-
+    home_link_xpath = '//li[@class="nav-item"]/a[@href="#/"]'
     button_publish_xpath = '//button'
     def __init__(self, driver=None):
         if driver == None:
@@ -34,3 +34,13 @@ class PageEditor():
     def click_publish(self):
         self.driver.find_element_by_xpath(self.button_publish_xpath).click()
         return a.PageArticle(self.driver)
+
+    def geturl(self):
+        return self.driver.current_url
+
+    def setshorttext(self,shorttext):
+        f.inputelement(self.driver, self.shorttext_input[0], self.shorttext_input[1]).clear()
+        f.inputelement(self.driver, self.shorttext_input[0], self.shorttext_input[1]).send_keys(shorttext)
+
+    def go_home(self):
+        self.driver.find_element_by_xpath(self.home_link_xpath).click()

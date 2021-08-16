@@ -23,7 +23,7 @@ def test_inputdata():
     # megadott teszt userrel belépés
     p_signin.fill_inputs(testemail, testpassw)
     p_signin.click_signin()
-    time.sleep(2)
+    time.sleep(1)
     with open('./input.csv', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         next(reader)

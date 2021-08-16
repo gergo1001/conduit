@@ -1,0 +1,21 @@
+[ {
+  "uid" : "dd18d1060e8f34bd",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629116730702,
+    "stop" : 1629116755100,
+    "duration" : 24398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8cafdcfe4c11904",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629116755103,
+    "stop" : 1629116785118,
+    "duration" : 30015
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

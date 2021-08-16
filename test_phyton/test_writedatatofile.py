@@ -27,4 +27,3 @@ def test_datawritetofile():
     p_main.articles_write_to_file('output.csv')
     p_main.__del__()
 
-test_datawritetofile()

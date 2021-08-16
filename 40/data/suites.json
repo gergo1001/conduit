@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "test_phyton",
+    "children" : [ {
+      "name" : "test_cookies",
+      "children" : [ {
+        "name" : "test_cookies",
+        "uid" : "50ef72e8c066d4cd",
+        "parentUid" : "660ca879299e8cebccd503959455e248",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629116332211,
+          "stop" : 1629116341615,
+          "duration" : 9404
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "660ca879299e8cebccd503959455e248"
+    }, {
+      "name" : "test_registration",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "2103bfface536c1f",
+        "parentUid" : "8b866a4666f9b74f2231698a5a037524",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629116341658,
+          "stop" : 1629116372033,
+          "duration" : 30375
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8b866a4666f9b74f2231698a5a037524"
+    } ],
+    "uid" : "fc4fc0abc565b6fe51fd8c01501215a7"
+  } ],
+  "name" : "suites"
+}

@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az83-93",
+    "children" : [ {
+      "name" : "3770-MainThread",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "2103bfface536c1f",
+        "parentUid" : "32a15c1b36d580e774e4d18e6c7cb7b8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629116341658,
+          "stop" : 1629116372033,
+          "duration" : 30375
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_cookies",
+        "uid" : "50ef72e8c066d4cd",
+        "parentUid" : "32a15c1b36d580e774e4d18e6c7cb7b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629116332211,
+          "stop" : 1629116341615,
+          "duration" : 9404
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "32a15c1b36d580e774e4d18e6c7cb7b8"
+    } ],
+    "uid" : "9c1e99805a17c5d80fd1672778bbb324"
+  } ],
+  "name" : "timeline"
+}

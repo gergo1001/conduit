@@ -3,7 +3,6 @@ import string
 
 webpage_visible = False
 
-
 def random_email():
     return "".join([random.choice(string.ascii_lowercase) for _ in range(8)]) + '@testemail.hu'
 

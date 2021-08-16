@@ -52,6 +52,6 @@ def test_newdata():
     #time.sleep(4)
     #print('2 test ok')
 
-
+    p_main.__del__()
 
 

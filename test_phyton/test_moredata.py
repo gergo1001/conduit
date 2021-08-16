@@ -22,3 +22,4 @@ def test_moredata():
 
     time.sleep(4)
     p_main.fill_article()
+    p_main.__del__()

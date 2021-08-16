@@ -39,4 +39,4 @@ def test_cookies():
     assert p_main.cookies_button_visible() is True
     p_main.cookies_decline()
     assert p_main.getcookies() == 'decline'
-
+    p_main.__del__()

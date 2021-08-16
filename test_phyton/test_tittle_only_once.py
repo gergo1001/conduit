@@ -21,4 +21,4 @@ def test_tittle_only_once():
     p_signin.click_signin()
     time.sleep(2)
     #assert p_main.none_repeat_tittle() is True
-
+    p_main.__del__()

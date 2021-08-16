@@ -8,7 +8,7 @@ import pages.page_signin as s
 import pages.page_editor as e
 import pages.page_article as a
 import pages.class_article as ca
-
+import csv
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -159,7 +159,8 @@ class PageMain():
             articles=self.driver.find_elements_by_xpath("//*[@class='preview-link']")
             for article in articles:
                 link=article.get_attribute('href')
-                title=article.find_element_by_tag_name('h1').text
+                titles=article.find_elements_by_tag_name('h1')
+                title=titles[0].text
                 shorttext=article.find_element_by_tag_name('p').text
                 tags_all=article.find_element_by_class_name("tag-list")
                 tags=tags_all.find_elements_by_tag_name('a')
@@ -214,6 +215,20 @@ class PageMain():
                 if article.shorttext == shorttext:
                     return True
         return False
+
+    def articles_write_to_file(self,filenev):
+        self.fill_article()
+        with open(filenev, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile, )
+            fieldnames = ['tittle', 'shorttext', 'text']
+            writer = csv.DictWriter(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL, fieldnames=fieldnames)
+            writer.writeheader()
+            for article in self.articles:
+                print(article.gettitle())
+                print(article.getstext())
+                print(article.gettext())
+                #writer.writerow([article.gettitle(), article.getstext(), article.gettext()])
+                writer.writerow(article.csvrow())
 
     def __del__(self):
         #if f.webpage_visible:

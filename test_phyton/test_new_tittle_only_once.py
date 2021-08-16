@@ -45,4 +45,4 @@ def test_new_tittle_only_once():
         p_article.delete_article()
         time.sleep(3)
 
-
+    p_main.__del__()

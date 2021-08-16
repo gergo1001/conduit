@@ -40,6 +40,6 @@ def test_editdata():
     p_editor.go_home()
     time.sleep(2)
     assert p_main.article_shorttext_van(title,ujertek) is True
-
+    p_main.__del__()
 
 

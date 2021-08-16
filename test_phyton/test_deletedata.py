@@ -40,4 +40,4 @@ def test_deletedata():
     time.sleep(2)
 
     assert p_main.search_article_with_title(title) is False
-
+    p_main.__del__()

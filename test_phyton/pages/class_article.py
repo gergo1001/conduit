@@ -34,5 +34,6 @@ class Article():
         else:
             return ""
 
-
+    def csvrow(self):
+        return self.title+';'+self.shorttext+';'+self.text
 

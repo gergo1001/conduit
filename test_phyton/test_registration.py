@@ -35,8 +35,8 @@ def test_registration():
     assert p_main.get_user_sign_in(user) is False
 
     #bejelentkezés
-    p_signin=p_main.signinpage_open()
-    p_signin.fill_inputs(email,password)
+    p_signin = p_main.signinpage_open()
+    p_signin.fill_inputs(email, password)
     p_signin.click_signin()
     time.sleep(4)
     assert p_main.get_user_sign_in(user) is True

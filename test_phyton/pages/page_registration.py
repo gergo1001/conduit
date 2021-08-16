@@ -18,12 +18,13 @@ class PageRegistration():
     message_ok_xpath='/html/body/div[2]/div/div[4]/div/button'
     good_message_ok='Welcome!'
     good_message_missing_email='Registration failed!'
+
     def __init__(self, driver=None):
         if driver == None:
             options = Options()
             options.headless = False
             driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
-        self.driver : webdriver = driver
+        self.driver: webdriver = driver
 
     def fill_inputs(self, user, email, passw):
         f.inputelement(self.driver, self.user_input[0], self.user_input[1]).clear()

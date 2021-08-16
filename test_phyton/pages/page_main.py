@@ -1,8 +1,11 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pages.func as f
 import pages.page_registration as p
 import pages.page_signin as s
+import pages.page_editor as e
 
 
 from webdriver_manager.chrome import ChromeDriverManager
@@ -18,6 +21,7 @@ class PageMain():
     #sign in elérése
     registration_link_xpath = '//li[@class="nav-item"]/a[@href="#/register"]'
     signin_link_xpath = '//li[@class="nav-item"]/a[@href="#/login"]'
+    editor_link_xpath = '//li[@class="nav-item"]/a[@href="#/editor"]'
 
     #menű elemek elérése
     menu_items_classname='nav-item'
@@ -55,6 +59,13 @@ class PageMain():
     def signinpage_open(self):
         self.driver.find_element_by_xpath(self.signin_link_xpath).click()
         return s.PageSignin(self.driver)
+
+    def newarticlepage_open(self):
+        time.sleep(2)
+        self.driver.find_element_by_xpath(self.editor_link_xpath).click()
+        time.sleep(2)
+        return e.PageEditor(self.driver)
+
 
     def get_user_sign_in(self,username):
         menu_items = self.driver.find_elements_by_class_name(self.menu_items_classname)

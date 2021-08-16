@@ -13,6 +13,8 @@ class PageMain():
     #cookis elérések
     cookies_accept_button_xpath = "//button[@class='cookie__bar__buttons__button cookie__bar__buttons__button--accept']"
     cookies_decline_button_xpath = "//button[@class='cookie__bar__buttons__button cookie__bar__buttons__button--decline']"
+    cookies_page_link_xpath="//a[@href='https://cookiesandyou.com/']"
+
     #sign in elérése
     registration_link_xpath = '//li[@class="nav-item"]/a[@href="#/register"]'
     signin_link_xpath = '//li[@class="nav-item"]/a[@href="#/login"]'
@@ -77,10 +79,11 @@ class PageMain():
         self.driver.delete_all_cookies()
 
     def getcookies(self):
-        value=""
-        ertek = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
-        if 'value' in ertek.keys():
-            value=ertek['value']
+        value = ""
+        cookies = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
+        if cookies is not None:
+            if 'value' in cookies.keys():
+                value = cookies['value']
         return value
 
 
@@ -108,3 +111,18 @@ class PageMain():
                 ok_value = False
         return ok_value
 
+    def cookies_website_click(self):
+        self.driver.find_element_by_xpath(self.cookies_page_link_xpath).click()
+
+    def get_and_close_second_window_url(self):
+        url=""
+        current = self.driver.current_window_handle
+        multi_window = self.driver.window_handles
+
+        for window in multi_window:
+            if window != current:
+                self.driver.switch_to.window(window)
+                url=self.driver.current_url
+                self.driver.close()
+        self.driver.switch_to.window(current)
+        return url

@@ -13,7 +13,7 @@ class PageRegistration():
     passw_input = ['xpath', '//input[@placeholder="Password"]']
     email_input = ['xpath', '//input[@placeholder="Email"]']
     user_input = ['xpath', '//input[@placeholder="Username"]']
-    link_registration_xpath='//button'
+    link_registration_xpath = '//button'
     message_text_xpath='/html/body/div[2]/div/div[2]'
     message_ok_xpath='/html/body/div[2]/div/div[4]/div/button'
     good_message_ok='Welcome!'
@@ -37,9 +37,9 @@ class PageRegistration():
         self.driver.find_element_by_xpath(self.link_registration_xpath).click()
 
     def get_message(self):
-        time.sleep(2)
+        time.sleep(4)
         message=self.driver.find_element_by_xpath(self.message_text_xpath).text
-        time.sleep(2)
+        time.sleep(4)
         self.driver.find_element_by_xpath(self.message_ok_xpath).click()
         print(message)
         return message

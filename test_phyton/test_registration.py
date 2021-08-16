@@ -40,6 +40,6 @@ def test_registration():
     p_signin.click_signin()
     time.sleep(4)
     assert p_main.get_user_sign_in(user) is True
-  p_main.__del__()
+    p_main.__del__()
 
 

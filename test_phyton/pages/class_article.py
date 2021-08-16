@@ -29,11 +29,11 @@ class Article():
             return ""
 
     def gettext(self):
+        stringvalue=""
         if self.text is not None:
             return self.text
         else:
-            return ""
+            return stringvalue
 
-    def csvrow(self):
-        return self.title+';'+self.shorttext+';'+self.text
+
 

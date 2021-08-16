@@ -10,7 +10,7 @@ import pages.page_article as a
 import time
 
 
-def test_datawritetofile():
+def test_inputdata():
     p_main = m.PageMain()
     p_main.open()
     time.sleep(2)
@@ -24,6 +24,14 @@ def test_datawritetofile():
     p_signin.fill_inputs(testemail, testpassw)
     p_signin.click_signin()
     time.sleep(2)
-    p_main.articles_write_to_file('./output.csv')
-    p_main.__del__()
+    with open('input.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter='\t')
+        next(reader)
+        for row in reader:
+            p_editor = p_main.newarticlepage_open()
+            print(len(row))
+            print(row)
+            p_editor.fill_inputs(row[0], row[1], row[2], row[3])
+            p_editor.click_publish()
+            time.sleep(2)
 

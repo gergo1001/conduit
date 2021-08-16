@@ -167,6 +167,7 @@ class PageMain():
                 tag_text=[]
                 for tag in tags:
                     tag_text.append(tag.text)
+
                 article_element=ca.Article(link,title,shorttext,tag_text,None)
                 self.articles.append(article_element)
 
@@ -220,15 +221,13 @@ class PageMain():
         self.fill_article()
         with open(filenev, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile, )
-            fieldnames = ['tittle', 'shorttext', 'text']
-            writer = csv.DictWriter(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL, fieldnames=fieldnames)
-            writer.writeheader()
+            fieldnames = ['tittle', 'shorttext']
+            writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(fieldnames)
             for article in self.articles:
-                print(article.gettitle())
-                print(article.getstext())
-                print(article.gettext())
-                #writer.writerow([article.gettitle(), article.getstext(), article.gettext()])
-                writer.writerow(article.csvrow())
+                writer.writerow([article.gettitle(), article.getstext()])
+
+
 
     def __del__(self):
         #if f.webpage_visible:

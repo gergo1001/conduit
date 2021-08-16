@@ -1,0 +1,96 @@
+{
+  "uid" : "aee0d504ff141b03",
+  "name" : "test_tittle_only_once",
+  "fullName" : "test_phyton.test_tittle_only_once#test_tittle_only_once",
+  "historyId" : "e71d04a81cdf0e1e125d04f53cbbe9c1",
+  "time" : {
+    "start" : 1629147796697,
+    "stop" : 1629147800771,
+    "duration" : 4074
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9208bb8eb7040229",
+      "name" : "log",
+      "source" : "9208bb8eb7040229.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "5ad2241240c53495",
+      "name" : "stderr",
+      "source" : "5ad2241240c53495.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_tittle_only_once"
+  }, {
+    "name" : "host",
+    "value" : "fv-az74-944"
+  }, {
+    "name" : "thread",
+    "value" : "3798-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_tittle_only_once"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "8a382ce4233abaa8",
+        "reportUrl" : "https://gergo1001.github.io/conduit/44//#testresult/8a382ce4233abaa8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f1709811790>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f1709811790>> = <pages.page_main.PageMain object at 0x7f1709811790>.none_repeat_tittle",
+        "time" : {
+          "start" : 1629147255676,
+          "stop" : 1629147262418,
+          "duration" : 6742
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "aee0d504ff141b03.json",
+  "parameterValues" : [ ]
+}

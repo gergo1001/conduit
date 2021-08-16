@@ -1,0 +1,96 @@
+{
+  "uid" : "53690b95c6abe4c",
+  "name" : "test_datawritetofile",
+  "fullName" : "test_phyton.test_writedatatofile#test_datawritetofile",
+  "historyId" : "389353d07b07bd0a275a94a2ed117206",
+  "time" : {
+    "start" : 1629157023053,
+    "stop" : 1629157034582,
+    "duration" : 11529
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3f65bab9c05818df",
+      "name" : "log",
+      "source" : "3f65bab9c05818df.txt",
+      "type" : "text/plain",
+      "size" : 1418
+    }, {
+      "uid" : "988a0d0e6a8d2993",
+      "name" : "stderr",
+      "source" : "988a0d0e6a8d2993.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_writedatatofile"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-942"
+  }, {
+    "name" : "thread",
+    "value" : "3730-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_writedatatofile"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "2bb42ea0be07566e",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/2bb42ea0be07566e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: can only concatenate str (not \"NoneType\") to str",
+        "time" : {
+          "start" : 1629155505771,
+          "stop" : 1629155516063,
+          "duration" : 10292
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "53690b95c6abe4c.json",
+  "parameterValues" : [ ]
+}

@@ -38,5 +38,5 @@ def test_cookies():
     #gombok láthatóak-e
     assert p_main.cookies_button_visible() is True
     p_main.cookies_decline()
-    assert p_main.getcookies() == 'decline '
+    assert p_main.getcookies() == 'decline'
 

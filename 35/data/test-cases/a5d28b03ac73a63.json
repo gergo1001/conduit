@@ -1,0 +1,156 @@
+{
+  "uid" : "a5d28b03ac73a63",
+  "name" : "test_registration",
+  "fullName" : "test_phyton.test_registration#test_registration",
+  "historyId" : "9b0c184604c4951b336c662370611780",
+  "time" : {
+    "start" : 1629110625148,
+    "stop" : 1629110645306,
+    "duration" : 20158
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'PageMain' object has no attribute 'get_user_sign_in'",
+  "statusTrace" : "def test_registration():\n        p_main = m.PageMain()\n        p_main.open()\n        p_reg = p_main.regpage_open()\n    \n        #regisztráció üres email cimmel\n        p_reg.fill_inputs(f.random_user(), \"\", f.random_pass())\n        p_reg.click_registration()\n        assert p_reg.good_message_missing_email == p_reg.get_message()\n        #regisztráció helyes adatokkal\n        user = f.random_user()\n        email=f.random_email()\n        password=f.random_pass()\n        p_reg.fill_inputs(user, email , password)\n        p_reg.click_registration()\n        assert p_reg.good_message_ok == p_reg.get_message()\n        time.sleep(4)\n>       assert True == p_main.get_user_sign_in(user)\nE       AttributeError: 'PageMain' object has no attribute 'get_user_sign_in'\n\ntest_phyton/test_registration.py:31: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'PageMain' object has no attribute 'get_user_sign_in'",
+    "statusTrace" : "def test_registration():\n        p_main = m.PageMain()\n        p_main.open()\n        p_reg = p_main.regpage_open()\n    \n        #regisztráció üres email cimmel\n        p_reg.fill_inputs(f.random_user(), \"\", f.random_pass())\n        p_reg.click_registration()\n        assert p_reg.good_message_missing_email == p_reg.get_message()\n        #regisztráció helyes adatokkal\n        user = f.random_user()\n        email=f.random_email()\n        password=f.random_pass()\n        p_reg.fill_inputs(user, email , password)\n        p_reg.click_registration()\n        assert p_reg.good_message_ok == p_reg.get_message()\n        time.sleep(4)\n>       assert True == p_main.get_user_sign_in(user)\nE       AttributeError: 'PageMain' object has no attribute 'get_user_sign_in'\n\ntest_phyton/test_registration.py:31: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1e63f211448b3536",
+      "name" : "log",
+      "source" : "1e63f211448b3536.txt",
+      "type" : "text/plain",
+      "size" : 642
+    }, {
+      "uid" : "66102805db2e46ec",
+      "name" : "stdout",
+      "source" : "66102805db2e46ec.txt",
+      "type" : "text/plain",
+      "size" : 30
+    }, {
+      "uid" : "9038f696e0d65e12",
+      "name" : "stderr",
+      "source" : "9038f696e0d65e12.txt",
+      "type" : "text/plain",
+      "size" : 435
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_registration"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-942"
+  }, {
+    "name" : "thread",
+    "value" : "3709-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_registration"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "514ade56814b5474",
+        "reportUrl" : "https://gergo1001.github.io/conduit/34//#testresult/514ade56814b5474",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629030202836,
+          "stop" : 1629030219711,
+          "duration" : 16875
+        }
+      }, {
+        "uid" : "cc90c07bd418c08c",
+        "reportUrl" : "https://gergo1001.github.io/conduit/33//#testresult/cc90c07bd418c08c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+        "time" : {
+          "start" : 1629030006996,
+          "stop" : 1629030014100,
+          "duration" : 7104
+        }
+      }, {
+        "uid" : "ea7f5e19480cab12",
+        "reportUrl" : "https://gergo1001.github.io/conduit/32//#testresult/ea7f5e19480cab12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629029396280,
+          "stop" : 1629029403178,
+          "duration" : 6898
+        }
+      }, {
+        "uid" : "2dbe54e3d7557714",
+        "reportUrl" : "https://gergo1001.github.io/conduit/31//#testresult/2dbe54e3d7557714",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[2]/div/div[2]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+        "time" : {
+          "start" : 1629029359198,
+          "stop" : 1629029372744,
+          "duration" : 13546
+        }
+      }, {
+        "uid" : "29e669433ecfcf35",
+        "reportUrl" : "https://gergo1001.github.io/conduit/25//#testresult/29e669433ecfcf35",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629020552247,
+          "stop" : 1629020554999,
+          "duration" : 2752
+        }
+      }, {
+        "uid" : "fa4f0829615bd484",
+        "reportUrl" : "https://gergo1001.github.io/conduit/24//#testresult/fa4f0829615bd484",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628697913056,
+          "stop" : 1628697919378,
+          "duration" : 6322
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a5d28b03ac73a63.json",
+  "parameterValues" : [ ]
+}

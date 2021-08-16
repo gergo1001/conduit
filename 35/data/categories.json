@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'PageMain' object has no attribute 'get_user_sign_in'",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "a5d28b03ac73a63",
+        "parentUid" : "0bc32822e5f1102583bc21146e6b7495",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629110625148,
+          "stop" : 1629110645306,
+          "duration" : 20158
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0bc32822e5f1102583bc21146e6b7495"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

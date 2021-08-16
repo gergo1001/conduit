@@ -10,6 +10,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class PageMain():
     URL = "http://localhost:1667/"
+    #cookis elérések
+    cookies_accept_button_xpath = "//button[@class='cookie__bar__buttons__button cookie__bar__buttons__button--accept']"
+    cookies_decline_button_xpath = "//button[@class='cookie__bar__buttons__button cookie__bar__buttons__button--decline']"
     #sign in elérése
     registration_link_xpath = '//li[@class="nav-item"]/a[@href="#/register"]'
     signin_link_xpath = '//li[@class="nav-item"]/a[@href="#/login"]'
@@ -69,3 +72,39 @@ class PageMain():
         #if f.webpage_visible:
         #    self.driver.close()
         self.driver.quit()
+
+    def deletecookies(self):
+        self.driver.delete_all_cookies()
+
+    def getcookies(self):
+        value=""
+        ertek = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
+        if 'value' in ertek.keys():
+            value=ertek['value']
+        return value
+
+
+
+    def cookies_accept(self):
+        self.driver.find_element_by_xpath(self.cookies_accept_button_xpath).click()
+
+    def cookies_decline(self):
+        self.driver.find_element_by_xpath(self.cookies_decline_button_xpath).click()
+
+    def cookies_button_visible(self):
+        ok_value=True
+        accept_buttons = self.driver.find_elements_by_xpath(self.cookies_accept_button_xpath)
+        if len(accept_buttons) != 1:
+            ok_value = False
+        else:
+            if not accept_buttons[0].is_displayed():
+                ok_value = False
+
+        decline_buttons = self.driver.find_elements_by_xpath(self.cookies_decline_button_xpath)
+        if len(decline_buttons) != 1:
+            ok_value = False
+        else:
+            if not decline_buttons[0].is_displayed():
+                ok_value = False
+        return ok_value
+

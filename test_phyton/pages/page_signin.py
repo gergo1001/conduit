@@ -11,6 +11,13 @@ class PageSignin():
     email_input = ['xpath', '//input[@placeholder="Email"]']
     button_signin_xpath = '//button'
 
+    def __init__(self, driver=None):
+        if driver == None:
+            options = Options()
+            options.headless = False
+            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+        self.driver: webdriver = driver
+
     def fill_inputs(self, email, passw):
 
         f.inputelement(self.driver, self.email_input[0], self.email_input[1]).clear()
@@ -21,9 +28,3 @@ class PageSignin():
     def click_signin(self):
         self.driver.find_element_by_xpath(self.button_signin_xpath).click()
 
-    def __init__(self, driver=None):
-        if driver == None:
-            options = Options()
-            options.headless = False
-            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
-        self.driver : webdriver = driver

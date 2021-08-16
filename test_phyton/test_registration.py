@@ -28,18 +28,18 @@ def test_registration():
     p_reg.click_registration()
     assert p_reg.good_message_ok == p_reg.get_message()
     time.sleep(4)
-    assert True == p_main.get_user_sign_in(user)
+    assert p_main.get_user_sign_in(user) is True
     # kijelentkezés
     p_main.logout_click()
     time.sleep(3)
-    assert False == p_main.get_user_sign_in(user)
+    assert p_main.get_user_sign_in(user) is False
 
     #bejelentkezés
     p_signin=p_main.signinpage_open()
     p_signin.fill_inputs(email,password)
     p_signin.click_signin()
     time.sleep(4)
-    assert True == p_main.get_user_sign_in(user)
+    assert p_main.get_user_sign_in(user) is True
 
 
     p_main.__del__()

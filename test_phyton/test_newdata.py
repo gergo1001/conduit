@@ -21,17 +21,37 @@ def test_newdata():
     p_signin.click_signin()
 
     title = 'a'
-    stext = 'b'
-    text = 'c'
-    tags = 'd'
+    stext = 'blabla'
+    text = 'caaaa'
+    tags = 'dssss'
 
     p_editor = p_main.newarticlepage_open()
-    p_editor.fill_inputs(title,stext,text,tags)
+    p_editor.fill_inputs(title, stext, text, tags)
 
-    p_article=p_editor.click_publish()
+    p_article = p_editor.click_publish()
     assert testuser == p_article.getuser()
     assert text == p_article.gettext()
     assert tags == p_article.gettags()
     assert title == p_article.gettitle()
-    time.sleep(4)
+    p_article.back()
+    print('1 test ok')
+    #ugyanazzal a title-l nem szabadna, 2* elfogadni
+    #title = 'a'
+    #stext = 'blabla2'
+    #text = 'caaaa2'
+    #tags = 'dssss2'
+
+    #p_editor = p_main.newarticlepage_open()
+    #p_editor.fill_inputs(title, stext, text, tags)
+
+    #p_article = p_editor.click_publish()
+    #assert testuser == p_article.getuser()
+    #assert text == p_article.gettext()
+    #assert tags == p_article.gettags()
+    #assert title == p_article.gettitle()
+    #time.sleep(4)
+    #print('2 test ok')
+
+
+
 

@@ -15,7 +15,7 @@ def test_inputdata():
         # megadott teszt userrel belépés
         p_signin.fill_inputs(testemail, testpassw)
         p_signin.click_signin()
-        with open('./test_phyton/input.csv', newline='') as csvfile:
+        with open('./input.csv', newline='') as csvfile:
             reader = csv.reader(csvfile, delimiter='\t')
             next(reader)
             for row in reader:
@@ -24,6 +24,6 @@ def test_inputdata():
                 print(row)
                 p_editor.fill_inputs(row[0], row[1], row[2], row[3])
                 p_editor.click_publish()
-
+        print("lefutott")
     finally:
         p_main.__del__()

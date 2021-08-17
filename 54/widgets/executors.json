@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://gergo1001.github.io/conduit",
+  "buildOrder" : 54,
+  "buildName" : "GitHub Actions Run #1137383343",
+  "buildUrl" : "https://github.com/gergo1001/conduit/actions/runs/1137383343",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://gergo1001.github.io/conduit/54/"
+} ]

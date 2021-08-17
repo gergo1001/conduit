@@ -1,0 +1,101 @@
+[ {
+  "uid" : "d014f4d34a219781",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629158659144,
+    "stop" : 1629158691296,
+    "duration" : 32152
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "18c616a6d948ad2d",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629158784381,
+    "stop" : 1629158795434,
+    "duration" : 11053
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b7d79cb56f331ff",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629158750335,
+    "stop" : 1629158780367,
+    "duration" : 30032
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd4f4717400acbe5",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629158780370,
+    "stop" : 1629158784378,
+    "duration" : 4008
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a2cbe2211c227353",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629158594660,
+    "stop" : 1629158623921,
+    "duration" : 29261
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "855e812ae219f44f",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629158641069,
+    "stop" : 1629158659141,
+    "duration" : 18072
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a815e3450e3f70fa",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629158700231,
+    "stop" : 1629158741797,
+    "duration" : 41566
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ee50778e1035ec37",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629158741800,
+    "stop" : 1629158750332,
+    "duration" : 8532
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "99f783882dd36311",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629158623924,
+    "stop" : 1629158641066,
+    "duration" : 17142
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e86b72c31fcd5dd",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629158691300,
+    "stop" : 1629158700228,
+    "duration" : 8928
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

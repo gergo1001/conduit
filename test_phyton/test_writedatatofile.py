@@ -13,5 +13,3 @@ def test_datawritetofile():
     p_signin.fill_inputs(testemail, testpassw)
     p_signin.click_signin()
     p_main.articles_write_to_file('./output.csv')
-
-

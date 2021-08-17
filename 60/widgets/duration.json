@@ -1,0 +1,101 @@
+[ {
+  "uid" : "fefb4fdb5774fb7c",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629225856409,
+    "stop" : 1629225885752,
+    "duration" : 29343
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe18ad79d2dcfff6",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629225960398,
+    "stop" : 1629225980841,
+    "duration" : 20443
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6617e660bd166833",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629225926455,
+    "stop" : 1629225960348,
+    "duration" : 33893
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "dbc61215d8c1a6d5",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629225910194,
+    "stop" : 1629225926452,
+    "duration" : 16258
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41e7bb4adc49577d",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629225792742,
+    "stop" : 1629225830192,
+    "duration" : 37450
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "252a53d1e8b14885",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629225885755,
+    "stop" : 1629225910191,
+    "duration" : 24436
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c989f201cc38c8c8",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629226019213,
+    "stop" : 1629226033956,
+    "duration" : 14743
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ede4e88be4e2e26",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629225830194,
+    "stop" : 1629225856406,
+    "duration" : 26212
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a09e6b2f87cbb17",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629225980847,
+    "stop" : 1629226019210,
+    "duration" : 38363
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c7b6705aea4907af",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629226033961,
+    "stop" : 1629226048664,
+    "duration" : 14703
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

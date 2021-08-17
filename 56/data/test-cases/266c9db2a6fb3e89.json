@@ -1,0 +1,177 @@
+{
+  "uid" : "266c9db2a6fb3e89",
+  "name" : "test_tittle_only_once",
+  "fullName" : "test_phyton.test_tittle_only_once#test_tittle_only_once",
+  "historyId" : "e71d04a81cdf0e1e125d04f53cbbe9c1",
+  "time" : {
+    "start" : 1629194550597,
+    "stop" : 1629194554662,
+    "duration" : 4065
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "356a20fbe7ad85",
+      "name" : "log",
+      "source" : "356a20fbe7ad85.txt",
+      "type" : "text/plain",
+      "size" : 1418
+    }, {
+      "uid" : "3f761e39e723d368",
+      "name" : "stderr",
+      "source" : "3f761e39e723d368.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_tittle_only_once"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-878"
+  }, {
+    "name" : "thread",
+    "value" : "3751-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_tittle_only_once"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 10,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "8bf7cd82dc4da286",
+        "reportUrl" : "https://gergo1001.github.io/conduit/55//#testresult/8bf7cd82dc4da286",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629159442120,
+          "stop" : 1629159446138,
+          "duration" : 4018
+        }
+      }, {
+        "uid" : "bd4f4717400acbe5",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/bd4f4717400acbe5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158780370,
+          "stop" : 1629158784378,
+          "duration" : 4008
+        }
+      }, {
+        "uid" : "f2b4378ae3f02599",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/f2b4378ae3f02599",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158407884,
+          "stop" : 1629158412305,
+          "duration" : 4421
+        }
+      }, {
+        "uid" : "9389a6a9197f8f56",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/9389a6a9197f8f56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157880679,
+          "stop" : 1629157884813,
+          "duration" : 4134
+        }
+      }, {
+        "uid" : "9324a7d33d01d360",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/9324a7d33d01d360",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157427663,
+          "stop" : 1629157431649,
+          "duration" : 3986
+        }
+      }, {
+        "uid" : "1ba966c8c2b671d0",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/1ba966c8c2b671d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157018700,
+          "stop" : 1629157023049,
+          "duration" : 4349
+        }
+      }, {
+        "uid" : "3f4781d53c4c61e",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/3f4781d53c4c61e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629155501673,
+          "stop" : 1629155505768,
+          "duration" : 4095
+        }
+      }, {
+        "uid" : "6257b05645c03812",
+        "reportUrl" : "https://gergo1001.github.io/conduit/47//#testresult/6257b05645c03812",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629152576744,
+          "stop" : 1629152580801,
+          "duration" : 4057
+        }
+      }, {
+        "uid" : "aee0d504ff141b03",
+        "reportUrl" : "https://gergo1001.github.io/conduit/45//#testresult/aee0d504ff141b03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147796697,
+          "stop" : 1629147800771,
+          "duration" : 4074
+        }
+      }, {
+        "uid" : "8a382ce4233abaa8",
+        "reportUrl" : "https://gergo1001.github.io/conduit/44//#testresult/8a382ce4233abaa8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f1709811790>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f1709811790>> = <pages.page_main.PageMain object at 0x7f1709811790>.none_repeat_tittle",
+        "time" : {
+          "start" : 1629147255676,
+          "stop" : 1629147262418,
+          "duration" : 6742
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "266c9db2a6fb3e89.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,101 @@
+[ {
+  "uid" : "8465c9cce4761bd5",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629194465907,
+    "stop" : 1629194475026,
+    "duration" : 9119
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85686c15edb203bd",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629194397347,
+    "stop" : 1629194415042,
+    "duration" : 17695
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "edad6a386721b7f1",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629194365278,
+    "stop" : 1629194397343,
+    "duration" : 32065
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f57500125b2c25a7",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629194520482,
+    "stop" : 1629194550593,
+    "duration" : 30111
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c11b6e740bb4028a",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629194475029,
+    "stop" : 1629194505381,
+    "duration" : 30352
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5d78cdca73a94b9",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629194433503,
+    "stop" : 1629194465903,
+    "duration" : 32400
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c40d967e2105204c",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629194554666,
+    "stop" : 1629194566956,
+    "duration" : 12290
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d933c282fa697f92",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629194505441,
+    "stop" : 1629194520474,
+    "duration" : 15033
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "41cc5a74c1575a6",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629194415045,
+    "stop" : 1629194433500,
+    "duration" : 18455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "266c9db2a6fb3e89",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629194550597,
+    "stop" : 1629194554662,
+    "duration" : 4065
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

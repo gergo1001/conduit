@@ -1,11 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import pages.func as f
-import pages.page_registration as p
-import pages.page_signin as s
 import pages.page_main as m
-import pages.page_editor as e
-import pages.page_article as a
 import time
 
 def test_editdata():
@@ -39,6 +33,7 @@ def test_editdata():
     p_editor.click_publish()
     p_editor.go_home()
     time.sleep(2)
+    #felgyűjti újra az összes cikket és ellenőrzi, hogy az adott tittle-el rendelkező cikknél az új érték e a shorttext
     assert p_main.article_shorttext_van(title,ujertek) is True
     p_main.__del__()
 

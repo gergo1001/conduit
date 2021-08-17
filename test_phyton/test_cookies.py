@@ -1,10 +1,5 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 import time
-import pages.page_registration as p
 import pages.page_main as m
-import pages.func as f
 
 
 def test_cookies():

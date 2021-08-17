@@ -1,12 +1,4 @@
-import csv
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import pages.func as f
-import pages.page_registration as p
-import pages.page_signin as s
 import pages.page_main as m
-import pages.page_editor as e
-import pages.page_article as a
 import time
 
 
@@ -24,6 +16,6 @@ def test_datawritetofile():
     p_signin.fill_inputs(testemail, testpassw)
     p_signin.click_signin()
     time.sleep(2)
-    p_main.articles_write_to_file('./output.csv')
+    p_main.articles_write_to_file('./test_phyton/output.csv')
     p_main.__del__()
 

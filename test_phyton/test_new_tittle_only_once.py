@@ -38,7 +38,7 @@ def test_new_tittle_only_once():
         p_article.go_home()
         time.sleep(1)
 
-    #assert p_main.none_repeat_tittle_from_list_article(tittles) is True
+    assert p_main.none_repeat_tittle_from_list_article(tittles) is True
 
     for article in articles:
         p_article=p_main.article_open(article.link)

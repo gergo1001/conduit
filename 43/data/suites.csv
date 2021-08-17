@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Aug 16 13:38:24 GMT 2021","Mon Aug 16 13:38:54 GMT 2021","29914","test_phyton","test_registration","","","","test_registration",""
-"passed","Mon Aug 16 13:37:46 GMT 2021","Mon Aug 16 13:38:11 GMT 2021","24639","test_phyton","test_cookies","","","","test_cookies",""
-"passed","Mon Aug 16 13:38:11 GMT 2021","Mon Aug 16 13:38:24 GMT 2021","12625","test_phyton","test_newdata","","","","test_newdata",""

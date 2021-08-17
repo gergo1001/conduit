@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6765b05a30>>(['rvonDRdJze', 'cyHEwmqkGi', 'wxDoWlqPgX'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6765b05a30>> = <pages.page_main.PageMain object at 0x7f6765b05a30>.none_repeat_tittle_from_list_article",
+      "children" : [ {
+        "name" : "test_new_tittle_only_once",
+        "uid" : "d5dd90fcaadffddf",
+        "parentUid" : "ba3c1b807d83d3204b2313a677fe0aca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629232086400,
+          "stop" : 1629232121099,
+          "duration" : 34699
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ba3c1b807d83d3204b2313a677fe0aca"
+    }, {
+      "name" : "AssertionError: assert 'dssss2' == 'dssss'\n  - dssss\n  + dssss2\n  ?      +",
+      "children" : [ {
+        "name" : "test_newdata",
+        "uid" : "be4cbce11d5700be",
+        "parentUid" : "9456d28f5f3c4a54e1e5c03d2cd29772",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629232121146,
+          "stop" : 1629232141643,
+          "duration" : 20497
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9456d28f5f3c4a54e1e5c03d2cd29772"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f6765b791c0>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f6765b791c0>> = <pages.page_main.PageMain object at 0x7f6765b791c0>.none_repeat_tittle",
+      "children" : [ {
+        "name" : "test_tittle_only_once",
+        "uid" : "a01b0887597dbd6e",
+        "parentUid" : "7232b5a8ca2b02d8eeadbf30b4dc3621",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629232180093,
+          "stop" : 1629232196738,
+          "duration" : 16645
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7232b5a8ca2b02d8eeadbf30b4dc3621"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

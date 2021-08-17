@@ -1,0 +1,101 @@
+[ {
+  "uid" : "efc64fd46c1ca6d0",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629232196742,
+    "stop" : 1629232213548,
+    "duration" : 16806
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a01b0887597dbd6e",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629232180093,
+    "stop" : 1629232196738,
+    "duration" : 16645
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5dd90fcaadffddf",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629232086400,
+    "stop" : 1629232121099,
+    "duration" : 34699
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c8d8269b630403c9",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629232141648,
+    "stop" : 1629232180089,
+    "duration" : 38441
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d978bcc471ce781",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629231995089,
+    "stop" : 1629232025022,
+    "duration" : 29933
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "28513b8dec453f5",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629232069490,
+    "stop" : 1629232086397,
+    "duration" : 16907
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ca6b536bfdb765d",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629231969338,
+    "stop" : 1629231995086,
+    "duration" : 25748
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "be4cbce11d5700be",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629232121146,
+    "stop" : 1629232141643,
+    "duration" : 20497
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "95a72f9d0de00461",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629232025024,
+    "stop" : 1629232069488,
+    "duration" : 44464
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b63b8d1b5c6ea498",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629231937384,
+    "stop" : 1629231969335,
+    "duration" : 31951
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

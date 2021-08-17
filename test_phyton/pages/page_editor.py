@@ -1,25 +1,20 @@
 import time
 
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import pages.func as f
 import pages.page_article as a
 
-from webdriver_manager.chrome import ChromeDriverManager
 
-class PageEditor():
+class PageEditor:
     title_input = ['xpath', '//input[@placeholder="Article Title"]']
     shorttext_input = ['xpath', '//input[@placeholder="What\'s this article about?"]']
     text_input = ['xpath', '//fieldset/textarea[@placeholder="Write your article (in markdown)"]']
     tags_input = ['xpath', "//input[@placeholder='Enter tags']"]
     home_link_xpath = '//li[@class="nav-item"]/a[@href="#/"]'
     button_publish_xpath = '//button'
-    def __init__(self, driver=None):
-        if driver == None:
-            options = Options()
-            options.headless = False
-            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+    def __init__(self, driver):
         self.driver: webdriver = driver
+        time.sleep(2)
 
     def fill_inputs(self, title, shorttext,text,tags):
         f.inputelement(self.driver, self.title_input[0], self.title_input[1]).clear()
@@ -33,6 +28,7 @@ class PageEditor():
 
     def click_publish(self):
         self.driver.find_element_by_xpath(self.button_publish_xpath).click()
+        time.sleep(2)
         return a.PageArticle(self.driver)
 
     def geturl(self):
@@ -44,3 +40,4 @@ class PageEditor():
 
     def go_home(self):
         self.driver.find_element_by_xpath(self.home_link_xpath).click()
+        time.sleep(1)

@@ -234,12 +234,13 @@ class PageMain:
     def articles_write_to_file(self, filenev):
         self.fill_article()
         with open(filenev, 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile, )
+            writer = csv.writer(csvfile )
             fieldnames = ['tittle', 'shorttext']
             writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(fieldnames)
             for article in self.articles:
                 writer.writerow([article.gettitle(), article.getstext()])
+
 
     def __del__(self):
         self.driver.quit()

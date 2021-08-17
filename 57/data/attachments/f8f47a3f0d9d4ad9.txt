@@ -1,0 +1,9 @@
+WARNING  urllib3.connectionpool:connectionpool.py:780 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa111a04f10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5a380c112eef66a4802e17e1e6a002e
+WARNING  urllib3.connectionpool:connectionpool.py:780 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa111b25310>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5a380c112eef66a4802e17e1e6a002e
+WARNING  urllib3.connectionpool:connectionpool.py:780 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa111b25700>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5a380c112eef66a4802e17e1e6a002e
+INFO     WDM:logger.py:12 
+
+INFO     WDM:logger.py:12 ====== WebDriver manager ======
+INFO     WDM:logger.py:12 Current google-chrome version is 92.0.4515
+INFO     WDM:logger.py:12 Get LATEST driver version for 92.0.4515
+INFO     WDM:logger.py:12 Driver [/home/runner/.wdm/drivers/chromedriver/linux64/92.0.4515.107/chromedriver] found in cache

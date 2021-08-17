@@ -12,6 +12,6 @@ def test_datawritetofile():
     # megadott teszt userrel belépés
     p_signin.fill_inputs(testemail, testpassw)
     p_signin.click_signin()
-    p_main.articles_write_to_file('./test_phyton/output.csv')
+    p_main.articles_write_to_file('./output.csv')
 
 

@@ -1,0 +1,176 @@
+{
+  "uid" : "c387e52eb43aa816",
+  "name" : "test_new_tittle_only_once",
+  "fullName" : "test_phyton.test_new_tittle_only_once#test_new_tittle_only_once",
+  "historyId" : "8080c046d6f8dda4b68b93625ad373df",
+  "time" : {
+    "start" : 1629159366504,
+    "stop" : 1629159396808,
+    "duration" : 30304
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>>(['RsKgPodTMx', 'MPSLUXKGGO', 'bvyBtGsaIN'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>> = <pages.page_main.PageMain object at 0x7fe5275f9ac0>.none_repeat_tittle_from_list_article",
+  "statusTrace" : "def test_new_tittle_only_once():\n        p_main = m.PageMain()\n        p_main.open()\n        p_signin = p_main.signinpage_open()\n        # tesztadatok\n        testemail = 'testuser1@example.com'\n        testpassw = 'Abcd123$'\n        testuser = 'testuser1'\n        # megadott teszt userrel belépés\n        p_signin.fill_inputs(testemail, testpassw)\n        p_signin.click_signin()\n        time.sleep(2)\n        articles=[]\n        tittles=[]\n        tag='c'\n        for _ in range(3):\n            tittle=f.random_title()\n            if tittle not in tittles:\n                article=ca.Article(None,tittle,'a','b',tag)\n                articles.append(article)\n                tittles.append(tittle)\n        for article in articles:\n            p_editor = p_main.newarticlepage_open()\n            p_editor.fill_inputs(article.gettitle(), article.shorttext, article.text, tag)\n            p_article = p_editor.click_publish()\n            article.setlink(p_article.geturl())\n            p_article.go_home()\n            time.sleep(1)\n    \n>       assert p_main.none_repeat_tittle_from_list_article(tittles) is True\nE       AssertionError: assert False is True\nE        +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>>(['RsKgPodTMx', 'MPSLUXKGGO', 'bvyBtGsaIN'])\nE        +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>> = <pages.page_main.PageMain object at 0x7fe5275f9ac0>.none_repeat_tittle_from_list_article\n\ntest_phyton/test_new_tittle_only_once.py:41: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>>(['RsKgPodTMx', 'MPSLUXKGGO', 'bvyBtGsaIN'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>> = <pages.page_main.PageMain object at 0x7fe5275f9ac0>.none_repeat_tittle_from_list_article",
+    "statusTrace" : "def test_new_tittle_only_once():\n        p_main = m.PageMain()\n        p_main.open()\n        p_signin = p_main.signinpage_open()\n        # tesztadatok\n        testemail = 'testuser1@example.com'\n        testpassw = 'Abcd123$'\n        testuser = 'testuser1'\n        # megadott teszt userrel belépés\n        p_signin.fill_inputs(testemail, testpassw)\n        p_signin.click_signin()\n        time.sleep(2)\n        articles=[]\n        tittles=[]\n        tag='c'\n        for _ in range(3):\n            tittle=f.random_title()\n            if tittle not in tittles:\n                article=ca.Article(None,tittle,'a','b',tag)\n                articles.append(article)\n                tittles.append(tittle)\n        for article in articles:\n            p_editor = p_main.newarticlepage_open()\n            p_editor.fill_inputs(article.gettitle(), article.shorttext, article.text, tag)\n            p_article = p_editor.click_publish()\n            article.setlink(p_article.geturl())\n            p_article.go_home()\n            time.sleep(1)\n    \n>       assert p_main.none_repeat_tittle_from_list_article(tittles) is True\nE       AssertionError: assert False is True\nE        +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>>(['RsKgPodTMx', 'MPSLUXKGGO', 'bvyBtGsaIN'])\nE        +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>> = <pages.page_main.PageMain object at 0x7fe5275f9ac0>.none_repeat_tittle_from_list_article\n\ntest_phyton/test_new_tittle_only_once.py:41: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "175eda7e036ae1e6",
+      "name" : "log",
+      "source" : "175eda7e036ae1e6.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "a1c4b024b516a1f4",
+      "name" : "stderr",
+      "source" : "a1c4b024b516a1f4.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_new_tittle_only_once"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-878"
+  }, {
+    "name" : "thread",
+    "value" : "3850-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_new_tittle_only_once"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "a815e3450e3f70fa",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/a815e3450e3f70fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158700231,
+          "stop" : 1629158741797,
+          "duration" : 41566
+        }
+      }, {
+        "uid" : "c4b1f71170ad62f1",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/c4b1f71170ad62f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158328205,
+          "stop" : 1629158370061,
+          "duration" : 41856
+        }
+      }, {
+        "uid" : "a22c401706b2e2b6",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/a22c401706b2e2b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157799999,
+          "stop" : 1629157841723,
+          "duration" : 41724
+        }
+      }, {
+        "uid" : "329d7afec84b05eb",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/329d7afec84b05eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157347424,
+          "stop" : 1629157389154,
+          "duration" : 41730
+        }
+      }, {
+        "uid" : "3c503b9fddefa346",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/3c503b9fddefa346",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629156936515,
+          "stop" : 1629156978939,
+          "duration" : 42424
+        }
+      }, {
+        "uid" : "1fa6b7a76d0d5270",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/1fa6b7a76d0d5270",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629155421704,
+          "stop" : 1629155463175,
+          "duration" : 41471
+        }
+      }, {
+        "uid" : "d300c1f98674f802",
+        "reportUrl" : "https://gergo1001.github.io/conduit/47//#testresult/d300c1f98674f802",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629152497707,
+          "stop" : 1629152538227,
+          "duration" : 40520
+        }
+      }, {
+        "uid" : "2ee3f60fb6e3500a",
+        "reportUrl" : "https://gergo1001.github.io/conduit/45//#testresult/2ee3f60fb6e3500a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147717608,
+          "stop" : 1629147759023,
+          "duration" : 41415
+        }
+      }, {
+        "uid" : "542e77b1eef24849",
+        "reportUrl" : "https://gergo1001.github.io/conduit/44//#testresult/542e77b1eef24849",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f17097ccd30>>(['SmqMwBKTko', 'UMvOZCiXGO', 'OuhDvkAZvi'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f17097ccd30>> = <pages.page_main.PageMain object at 0x7f17097ccd30>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629147184529,
+          "stop" : 1629147213395,
+          "duration" : 28866
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c387e52eb43aa816.json",
+  "parameterValues" : [ ]
+}

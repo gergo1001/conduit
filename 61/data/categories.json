@@ -1,0 +1,81 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: './input.csv'",
+      "children" : [ {
+        "name" : "test_inputdata",
+        "uid" : "5c87cb2ccbc602dc",
+        "parentUid" : "067e9a6b4f6400614fc5d66ae201e3ca",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629229133428,
+          "stop" : 1629229141917,
+          "duration" : 8489
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "067e9a6b4f6400614fc5d66ae201e3ca"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc9354c7d60>>(['cyjVCfuBwG', 'BeDmbkRsfl', 'ABZEtbIevc'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc9354c7d60>> = <pages.page_main.PageMain object at 0x7fc9354c7d60>.none_repeat_tittle_from_list_article",
+      "children" : [ {
+        "name" : "test_new_tittle_only_once",
+        "uid" : "31d9122ac86a28be",
+        "parentUid" : "dac055025d9b96af56b61ed102f456ab",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629229157938,
+          "stop" : 1629229191796,
+          "duration" : 33858
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dac055025d9b96af56b61ed102f456ab"
+    }, {
+      "name" : "AssertionError: assert 'dssss2' == 'dssss'\n  - dssss\n  + dssss2\n  ?      +",
+      "children" : [ {
+        "name" : "test_newdata",
+        "uid" : "e8b1a353c3f45854",
+        "parentUid" : "9456d28f5f3c4a54e1e5c03d2cd29772",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629229191815,
+          "stop" : 1629229212365,
+          "duration" : 20550
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9456d28f5f3c4a54e1e5c03d2cd29772"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7fc93547c4f0>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7fc93547c4f0>> = <pages.page_main.PageMain object at 0x7fc93547c4f0>.none_repeat_tittle",
+      "children" : [ {
+        "name" : "test_tittle_only_once",
+        "uid" : "2ac5e3fe928178a5",
+        "parentUid" : "715232937a5e4867fe025da37aa5d229",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629229250879,
+          "stop" : 1629229265537,
+          "duration" : 14658
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "715232937a5e4867fe025da37aa5d229"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

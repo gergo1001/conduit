@@ -1,0 +1,248 @@
+{
+  "uid" : "1dc307b33c0026e6",
+  "name" : "test_datawritetofile",
+  "fullName" : "test_phyton.test_writedatatofile#test_datawritetofile",
+  "historyId" : "389353d07b07bd0a275a94a2ed117206",
+  "time" : {
+    "start" : 1629284510492,
+    "stop" : 1629284518915,
+    "duration" : 8423
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: get_article() missing 1 required positional argument: 'must_fillarticle'",
+  "statusTrace" : "def test_datawritetofile():\n        p_main = m.PageMain()\n        p_main.open()\n        p_signin = p_main.signinpage_open()\n        # tesztadatok\n        testemail = 'testuser1@example.com'\n        testpassw = 'Abcd123$'\n        testuser = 'testuser1'\n        # megadott teszt userrel belépés\n        p_signin.fill_inputs(testemail, testpassw)\n        p_signin.click_signin()\n>       article_count = p_main.get_article()\nE       TypeError: get_article() missing 1 required positional argument: 'must_fillarticle'\n\ntest_phyton/test_writedatatofile.py:15: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: get_article() missing 1 required positional argument: 'must_fillarticle'",
+    "statusTrace" : "def test_datawritetofile():\n        p_main = m.PageMain()\n        p_main.open()\n        p_signin = p_main.signinpage_open()\n        # tesztadatok\n        testemail = 'testuser1@example.com'\n        testpassw = 'Abcd123$'\n        testuser = 'testuser1'\n        # megadott teszt userrel belépés\n        p_signin.fill_inputs(testemail, testpassw)\n        p_signin.click_signin()\n>       article_count = p_main.get_article()\nE       TypeError: get_article() missing 1 required positional argument: 'must_fillarticle'\n\ntest_phyton/test_writedatatofile.py:15: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f62271d82057d06a",
+      "name" : "log",
+      "source" : "f62271d82057d06a.txt",
+      "type" : "text/plain",
+      "size" : 1418
+    }, {
+      "uid" : "c8598ae1caa55efe",
+      "name" : "stderr",
+      "source" : "c8598ae1caa55efe.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_writedatatofile"
+  }, {
+    "name" : "host",
+    "value" : "fv-az42-898"
+  }, {
+    "name" : "thread",
+    "value" : "3750-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_writedatatofile"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 16,
+        "unknown" : 0,
+        "total" : 18
+      },
+      "items" : [ {
+        "uid" : "d080f5f9f63a1afc",
+        "reportUrl" : "https://gergo1001.github.io/conduit/65//#testresult/d080f5f9f63a1afc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629283960408,
+          "stop" : 1629283975462,
+          "duration" : 15054
+        }
+      }, {
+        "uid" : "bdbb1a4f11c35f9",
+        "reportUrl" : "https://gergo1001.github.io/conduit/64//#testresult/bdbb1a4f11c35f9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629283919485,
+          "stop" : 1629283934140,
+          "duration" : 14655
+        }
+      }, {
+        "uid" : "efc64fd46c1ca6d0",
+        "reportUrl" : "https://gergo1001.github.io/conduit/63//#testresult/efc64fd46c1ca6d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629232196742,
+          "stop" : 1629232213548,
+          "duration" : 16806
+        }
+      }, {
+        "uid" : "d27f89d120ed30ca",
+        "reportUrl" : "https://gergo1001.github.io/conduit/62//#testresult/d27f89d120ed30ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629229892249,
+          "stop" : 1629229907498,
+          "duration" : 15249
+        }
+      }, {
+        "uid" : "68d1a6c70691a489",
+        "reportUrl" : "https://gergo1001.github.io/conduit/61//#testresult/68d1a6c70691a489",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629229265542,
+          "stop" : 1629229280157,
+          "duration" : 14615
+        }
+      }, {
+        "uid" : "c7b6705aea4907af",
+        "reportUrl" : "https://gergo1001.github.io/conduit/60//#testresult/c7b6705aea4907af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629226033961,
+          "stop" : 1629226048664,
+          "duration" : 14703
+        }
+      }, {
+        "uid" : "e490b102ab5bfc6e",
+        "reportUrl" : "https://gergo1001.github.io/conduit/59//#testresult/e490b102ab5bfc6e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629225098415,
+          "stop" : 1629225113443,
+          "duration" : 15028
+        }
+      }, {
+        "uid" : "aeab080a99506f80",
+        "reportUrl" : "https://gergo1001.github.io/conduit/58//#testresult/aeab080a99506f80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629224519463,
+          "stop" : 1629224534390,
+          "duration" : 14927
+        }
+      }, {
+        "uid" : "5634bf72976ac116",
+        "reportUrl" : "https://gergo1001.github.io/conduit/57//#testresult/5634bf72976ac116",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629223853811,
+          "stop" : 1629223869945,
+          "duration" : 16134
+        }
+      }, {
+        "uid" : "c40d967e2105204c",
+        "reportUrl" : "https://gergo1001.github.io/conduit/56//#testresult/c40d967e2105204c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629194554666,
+          "stop" : 1629194566956,
+          "duration" : 12290
+        }
+      }, {
+        "uid" : "a576065957dd7cdc",
+        "reportUrl" : "https://gergo1001.github.io/conduit/55//#testresult/a576065957dd7cdc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629159446142,
+          "stop" : 1629159458245,
+          "duration" : 12103
+        }
+      }, {
+        "uid" : "18c616a6d948ad2d",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/18c616a6d948ad2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158784381,
+          "stop" : 1629158795434,
+          "duration" : 11053
+        }
+      }, {
+        "uid" : "5e1a3da404498cff",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/5e1a3da404498cff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158412308,
+          "stop" : 1629158422966,
+          "duration" : 10658
+        }
+      }, {
+        "uid" : "7c7e0d09aef9146e",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/7c7e0d09aef9146e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157884815,
+          "stop" : 1629157895543,
+          "duration" : 10728
+        }
+      }, {
+        "uid" : "e2e65f0f92091f06",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/e2e65f0f92091f06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157431652,
+          "stop" : 1629157442104,
+          "duration" : 10452
+        }
+      }, {
+        "uid" : "53690b95c6abe4c",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/53690b95c6abe4c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157023053,
+          "stop" : 1629157034582,
+          "duration" : 11529
+        }
+      }, {
+        "uid" : "2bb42ea0be07566e",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/2bb42ea0be07566e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: can only concatenate str (not \"NoneType\") to str",
+        "time" : {
+          "start" : 1629155505771,
+          "stop" : 1629155516063,
+          "duration" : 10292
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1dc307b33c0026e6.json",
+  "parameterValues" : [ ]
+}

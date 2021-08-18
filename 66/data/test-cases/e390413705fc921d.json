@@ -1,0 +1,245 @@
+{
+  "uid" : "e390413705fc921d",
+  "name" : "test_inputdata",
+  "fullName" : "test_phyton.test_inputdata#test_inputdata",
+  "historyId" : "664e7aae530b4e2d3db38d6b62c75cb0",
+  "time" : {
+    "start" : 1629284334025,
+    "stop" : 1629284386923,
+    "duration" : 52898
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\n  (Session info: headless chrome=92.0.4515.131)",
+  "statusTrace" : "def test_inputdata():\n        p_main = m.PageMain()\n        p_main.open()\n        try:\n            p_signin = p_main.signinpage_open()\n            # tesztadatok\n            testemail = 'testuser1@example.com'\n            testpassw = 'Abcd123$'\n            testuser = 'testuser1'\n            # megadott teszt userrel belépés\n            p_signin.fill_inputs(testemail, testpassw)\n            p_signin.click_signin()\n            tittles = []\n            with open('./test_phyton/input.csv', newline='') as csvfile:\n                reader = csv.reader(csvfile, delimiter='\\t')\n                next(reader)\n                for row in reader:\n                    p_editor = p_main.newarticlepage_open()\n                    tittles.append(row[0])\n                    p_editor.fill_inputs(row[0], row[1], row[2], row[3])\n                    p_editor.click_publish()\n            p_editor.go_home()\n            upload_element_count = len(tittles)\n            checked_upload = 0\n            for tittle in tittles:\n                if p_main.search_article_with_title(tittle):\n                    checked_upload += 1\n            # ellenőrzi, hogy mindegyik feltöltésre került\n            assert upload_element_count == checked_upload\n    \n            # kitörtli a felvitt adatokat\n            for tittle in tittles:\n>               p_main.del_article(tittle, False)\n\ntest_phyton/test_inputdata.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntest_phyton/pages/page_main.py:195: in del_article\n    p_article.delete_article()\ntest_phyton/pages/page_article.py:34: in delete_article\n    self.driver.find_element_by_xpath(self.delete_xpath).click()\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:394: in find_element_by_xpath\n    return self.find_element(by=By.XPATH, value=xpath)\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fb74f79c0a0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x561a044cae58 \\\\u003Cunknown>\\\\n#16 0x561a044e4dfd \\\\u003Cunknown>\\\\n#17 0x7f5e41a72609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\n  (Session info: headless chrome=92.0.4515.131)",
+    "statusTrace" : "def test_inputdata():\n        p_main = m.PageMain()\n        p_main.open()\n        try:\n            p_signin = p_main.signinpage_open()\n            # tesztadatok\n            testemail = 'testuser1@example.com'\n            testpassw = 'Abcd123$'\n            testuser = 'testuser1'\n            # megadott teszt userrel belépés\n            p_signin.fill_inputs(testemail, testpassw)\n            p_signin.click_signin()\n            tittles = []\n            with open('./test_phyton/input.csv', newline='') as csvfile:\n                reader = csv.reader(csvfile, delimiter='\\t')\n                next(reader)\n                for row in reader:\n                    p_editor = p_main.newarticlepage_open()\n                    tittles.append(row[0])\n                    p_editor.fill_inputs(row[0], row[1], row[2], row[3])\n                    p_editor.click_publish()\n            p_editor.go_home()\n            upload_element_count = len(tittles)\n            checked_upload = 0\n            for tittle in tittles:\n                if p_main.search_article_with_title(tittle):\n                    checked_upload += 1\n            # ellenőrzi, hogy mindegyik feltöltésre került\n            assert upload_element_count == checked_upload\n    \n            # kitörtli a felvitt adatokat\n            for tittle in tittles:\n>               p_main.del_article(tittle, False)\n\ntest_phyton/test_inputdata.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntest_phyton/pages/page_main.py:195: in del_article\n    p_article.delete_article()\ntest_phyton/pages/page_article.py:34: in delete_article\n    self.driver.find_element_by_xpath(self.delete_xpath).click()\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:394: in find_element_by_xpath\n    return self.find_element(by=By.XPATH, value=xpath)\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fb74f79c0a0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x561a044cae58 \\\\u003Cunknown>\\\\n#16 0x561a044e4dfd \\\\u003Cunknown>\\\\n#17 0x7f5e41a72609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9dc1ae44fd15bd22",
+      "name" : "log",
+      "source" : "9dc1ae44fd15bd22.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "afbaea721bc3fde3",
+      "name" : "stderr",
+      "source" : "afbaea721bc3fde3.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_inputdata"
+  }, {
+    "name" : "host",
+    "value" : "fv-az42-898"
+  }, {
+    "name" : "thread",
+    "value" : "3750-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_inputdata"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 8,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 17
+      },
+      "items" : [ {
+        "uid" : "d770e330893e174d",
+        "reportUrl" : "https://gergo1001.github.io/conduit/65//#testresult/d770e330893e174d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\n  (Session info: headless chrome=92.0.4515.131)",
+        "time" : {
+          "start" : 1629283779962,
+          "stop" : 1629283834582,
+          "duration" : 54620
+        }
+      }, {
+        "uid" : "6b62622322788c27",
+        "reportUrl" : "https://gergo1001.github.io/conduit/64//#testresult/6b62622322788c27",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: 'PageMain' object has no attribute 'del_article'",
+        "time" : {
+          "start" : 1629283751882,
+          "stop" : 1629283795601,
+          "duration" : 43719
+        }
+      }, {
+        "uid" : "95a72f9d0de00461",
+        "reportUrl" : "https://gergo1001.github.io/conduit/63//#testresult/95a72f9d0de00461",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629232025024,
+          "stop" : 1629232069488,
+          "duration" : 44464
+        }
+      }, {
+        "uid" : "f7f3eafb41921ca4",
+        "reportUrl" : "https://gergo1001.github.io/conduit/62//#testresult/f7f3eafb41921ca4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629229741822,
+          "stop" : 1629229766525,
+          "duration" : 24703
+        }
+      }, {
+        "uid" : "5c87cb2ccbc602dc",
+        "reportUrl" : "https://gergo1001.github.io/conduit/61//#testresult/5c87cb2ccbc602dc",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: './input.csv'",
+        "time" : {
+          "start" : 1629229133428,
+          "stop" : 1629229141917,
+          "duration" : 8489
+        }
+      }, {
+        "uid" : "252a53d1e8b14885",
+        "reportUrl" : "https://gergo1001.github.io/conduit/60//#testresult/252a53d1e8b14885",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629225885755,
+          "stop" : 1629225910191,
+          "duration" : 24436
+        }
+      }, {
+        "uid" : "bcf1f8bc3e5ca7c3",
+        "reportUrl" : "https://gergo1001.github.io/conduit/59//#testresult/bcf1f8bc3e5ca7c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629224947576,
+          "stop" : 1629224972410,
+          "duration" : 24834
+        }
+      }, {
+        "uid" : "f6666b4011c63f9f",
+        "reportUrl" : "https://gergo1001.github.io/conduit/58//#testresult/f6666b4011c63f9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629224369711,
+          "stop" : 1629224394417,
+          "duration" : 24706
+        }
+      }, {
+        "uid" : "2b485f12fec84bbe",
+        "reportUrl" : "https://gergo1001.github.io/conduit/57//#testresult/2b485f12fec84bbe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629223701269,
+          "stop" : 1629223725441,
+          "duration" : 24172
+        }
+      }, {
+        "uid" : "e5d78cdca73a94b9",
+        "reportUrl" : "https://gergo1001.github.io/conduit/56//#testresult/e5d78cdca73a94b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629194433503,
+          "stop" : 1629194465903,
+          "duration" : 32400
+        }
+      }, {
+        "uid" : "b283ffa317ad839a",
+        "reportUrl" : "https://gergo1001.github.io/conduit/55//#testresult/b283ffa317ad839a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629159324831,
+          "stop" : 1629159357227,
+          "duration" : 32396
+        }
+      }, {
+        "uid" : "d014f4d34a219781",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/d014f4d34a219781",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158659144,
+          "stop" : 1629158691296,
+          "duration" : 32152
+        }
+      }, {
+        "uid" : "2b08bd52ae11bae3",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/2b08bd52ae11bae3",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: './input.csv'",
+        "time" : {
+          "start" : 1629158312619,
+          "stop" : 1629158319691,
+          "duration" : 7072
+        }
+      }, {
+        "uid" : "ec774fafcc64c7df",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/ec774fafcc64c7df",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: './input.csv'",
+        "time" : {
+          "start" : 1629157783523,
+          "stop" : 1629157791561,
+          "duration" : 8038
+        }
+      }, {
+        "uid" : "30b8c6ef7d6c2941",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/30b8c6ef7d6c2941",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '\\\\.input.csv'",
+        "time" : {
+          "start" : 1629157331088,
+          "stop" : 1629157339048,
+          "duration" : 7960
+        }
+      }, {
+        "uid" : "a74cb89a8b3bf556",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/a74cb89a8b3bf556",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'input.csv'",
+        "time" : {
+          "start" : 1629156918069,
+          "stop" : 1629156926360,
+          "duration" : 8291
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e390413705fc921d.json",
+  "parameterValues" : [ ]
+}

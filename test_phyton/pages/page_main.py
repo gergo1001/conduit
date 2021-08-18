@@ -184,6 +184,16 @@ class PageMain:
                 self.articles.append(article_element)
         return bejart_lap
 
+    # ha nincs előtte közvetlen cikk listázás, akkor fel kell tölteni
+    def del_article(self, tittle, must_fillarticle):
+        if must_fillarticle:
+            self.fill_article()
+        for article in self.articles:
+            if article.title == tittle:
+                self.article_open(article.link)
+                p_article = a.PageArticle(self.driver)
+                p_article.delete_article()
+
     def search_article_with_title(self, title):
         self.fill_article()
         volt = False
@@ -234,13 +244,12 @@ class PageMain:
     def articles_write_to_file(self, filenev):
         self.fill_article()
         with open(filenev, 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile )
+            writer = csv.writer(csvfile)
             fieldnames = ['tittle', 'shorttext']
             writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(fieldnames)
             for article in self.articles:
                 writer.writerow([article.gettitle(), article.getstext()])
-
 
     def __del__(self):
         self.driver.quit()

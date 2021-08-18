@@ -32,9 +32,11 @@ class PageArticle:
 
     def delete_article(self):
         self.driver.find_element_by_xpath(self.delete_xpath).click()
+        time.sleep(1)
 
     def edit_article(self):
         self.driver.find_element_by_xpath(self.edit_xpath).click()
+        time.sleep(1)
         return e.PageEditor(self.driver)
 
     def back(self):

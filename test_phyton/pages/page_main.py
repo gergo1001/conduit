@@ -248,8 +248,16 @@ class PageMain:
             fieldnames = ['tittle', 'shorttext']
             writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(fieldnames)
+            row_count=0
             for article in self.articles:
+                row_count +=1
                 writer.writerow([article.gettitle(), article.getstext()])
+        return row_count
+
+    def get_article(self, must_fillarticle):
+        if must_fillarticle:
+            self.fill_article()
+        return len(article)
 
     def __del__(self):
         self.driver.quit()

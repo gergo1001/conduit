@@ -1,0 +1,272 @@
+{
+  "uid" : "d16df214709b452f",
+  "name" : "test_registration",
+  "fullName" : "test_phyton.test_registration#test_registration",
+  "historyId" : "9b0c184604c4951b336c662370611780",
+  "time" : {
+    "start" : 1629283866396,
+    "stop" : 1629283904814,
+    "duration" : 38418
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "55d445c152c24f30",
+      "name" : "log",
+      "source" : "55d445c152c24f30.txt",
+      "type" : "text/plain",
+      "size" : 1418
+    }, {
+      "uid" : "269284d95fb6cd18",
+      "name" : "stdout",
+      "source" : "269284d95fb6cd18.txt",
+      "type" : "text/plain",
+      "size" : 30
+    }, {
+      "uid" : "6f31bec248dd3068",
+      "name" : "stderr",
+      "source" : "6f31bec248dd3068.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_registration"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-93"
+  }, {
+    "name" : "thread",
+    "value" : "3721-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_registration"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 4,
+        "skipped" : 0,
+        "passed" : 29,
+        "unknown" : 0,
+        "total" : 33
+      },
+      "items" : [ {
+        "uid" : "c8d8269b630403c9",
+        "reportUrl" : "https://gergo1001.github.io/conduit/63//#testresult/c8d8269b630403c9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629232141648,
+          "stop" : 1629232180089,
+          "duration" : 38441
+        }
+      }, {
+        "uid" : "980269a78e2c8d1a",
+        "reportUrl" : "https://gergo1001.github.io/conduit/62//#testresult/980269a78e2c8d1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629229838274,
+          "stop" : 1629229876936,
+          "duration" : 38662
+        }
+      }, {
+        "uid" : "25ba47ca589154f2",
+        "reportUrl" : "https://gergo1001.github.io/conduit/61//#testresult/25ba47ca589154f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629229212371,
+          "stop" : 1629229250876,
+          "duration" : 38505
+        }
+      }, {
+        "uid" : "1a09e6b2f87cbb17",
+        "reportUrl" : "https://gergo1001.github.io/conduit/60//#testresult/1a09e6b2f87cbb17",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629225980847,
+          "stop" : 1629226019210,
+          "duration" : 38363
+        }
+      }, {
+        "uid" : "d6a5563371c2d1ac",
+        "reportUrl" : "https://gergo1001.github.io/conduit/59//#testresult/d6a5563371c2d1ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629225044393,
+          "stop" : 1629225083128,
+          "duration" : 38735
+        }
+      }, {
+        "uid" : "70149ac68044583",
+        "reportUrl" : "https://gergo1001.github.io/conduit/58//#testresult/70149ac68044583",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629224465917,
+          "stop" : 1629224504256,
+          "duration" : 38339
+        }
+      }, {
+        "uid" : "ba91d10933613b31",
+        "reportUrl" : "https://gergo1001.github.io/conduit/57//#testresult/ba91d10933613b31",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629223798512,
+          "stop" : 1629223837604,
+          "duration" : 39092
+        }
+      }, {
+        "uid" : "f57500125b2c25a7",
+        "reportUrl" : "https://gergo1001.github.io/conduit/56//#testresult/f57500125b2c25a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629194520482,
+          "stop" : 1629194550593,
+          "duration" : 30111
+        }
+      }, {
+        "uid" : "b973dee8d295a5cd",
+        "reportUrl" : "https://gergo1001.github.io/conduit/55//#testresult/b973dee8d295a5cd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629159411963,
+          "stop" : 1629159442117,
+          "duration" : 30154
+        }
+      }, {
+        "uid" : "b7d79cb56f331ff",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/b7d79cb56f331ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158750335,
+          "stop" : 1629158780367,
+          "duration" : 30032
+        }
+      }, {
+        "uid" : "6efde0d619b00c25",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/6efde0d619b00c25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158378754,
+          "stop" : 1629158407873,
+          "duration" : 29119
+        }
+      }, {
+        "uid" : "3ef09061cc0eb5e7",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/3ef09061cc0eb5e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157850549,
+          "stop" : 1629157880676,
+          "duration" : 30127
+        }
+      }, {
+        "uid" : "95a3263f1e8be9be",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/95a3263f1e8be9be",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157397735,
+          "stop" : 1629157427660,
+          "duration" : 29925
+        }
+      }, {
+        "uid" : "8ed7294f67b8f040",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/8ed7294f67b8f040",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629156988131,
+          "stop" : 1629157018696,
+          "duration" : 30565
+        }
+      }, {
+        "uid" : "889ab4746297cf99",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/889ab4746297cf99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629155471838,
+          "stop" : 1629155501670,
+          "duration" : 29832
+        }
+      }, {
+        "uid" : "82b945f1cad7b114",
+        "reportUrl" : "https://gergo1001.github.io/conduit/47//#testresult/82b945f1cad7b114",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629152546819,
+          "stop" : 1629152576741,
+          "duration" : 29922
+        }
+      }, {
+        "uid" : "fe19926729d49421",
+        "reportUrl" : "https://gergo1001.github.io/conduit/45//#testresult/fe19926729d49421",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147766645,
+          "stop" : 1629147796694,
+          "duration" : 30049
+        }
+      }, {
+        "uid" : "3e1d60bdab2f90d9",
+        "reportUrl" : "https://gergo1001.github.io/conduit/44//#testresult/3e1d60bdab2f90d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147225802,
+          "stop" : 1629147255673,
+          "duration" : 29871
+        }
+      }, {
+        "uid" : "756d85410fdc4ff2",
+        "reportUrl" : "https://gergo1001.github.io/conduit/43//#testresult/756d85410fdc4ff2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629121104129,
+          "stop" : 1629121134043,
+          "duration" : 29914
+        }
+      }, {
+        "uid" : "e8cafdcfe4c11904",
+        "reportUrl" : "https://gergo1001.github.io/conduit/41//#testresult/e8cafdcfe4c11904",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629116755103,
+          "stop" : 1629116785118,
+          "duration" : 30015
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d16df214709b452f.json",
+  "parameterValues" : [ ]
+}

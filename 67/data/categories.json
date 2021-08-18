@@ -1,0 +1,81 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>>(['XldzhHQNKV', 'PFZeBeQeLk', 'YcmyBleMzu'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>> = <pages.page_main.PageMain object at 0x7f6f119857c0>.none_repeat_tittle_from_list_article",
+      "children" : [ {
+        "name" : "test_new_tittle_only_once",
+        "uid" : "fd15ab3075c37a7d",
+        "parentUid" : "555514ea83f5d7f58868819af764e132",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629285172551,
+          "stop" : 1629285205964,
+          "duration" : 33413
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "555514ea83f5d7f58868819af764e132"
+    }, {
+      "name" : "AssertionError: assert 'dssss2' == 'dssss'\n  - dssss\n  + dssss2\n  ?      +",
+      "children" : [ {
+        "name" : "test_newdata",
+        "uid" : "1659242b8a72d45",
+        "parentUid" : "9456d28f5f3c4a54e1e5c03d2cd29772",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629285206014,
+          "stop" : 1629285226622,
+          "duration" : 20608
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9456d28f5f3c4a54e1e5c03d2cd29772"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f6f1193a880>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7f6f1193a880>> = <pages.page_main.PageMain object at 0x7f6f1193a880>.none_repeat_tittle",
+      "children" : [ {
+        "name" : "test_tittle_only_once",
+        "uid" : "33f564ecd10ae08d",
+        "parentUid" : "5fc0db8407b5e3cd7afe12a4e9eb3dee",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629285265207,
+          "stop" : 1629285280305,
+          "duration" : 15098
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5fc0db8407b5e3cd7afe12a4e9eb3dee"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "NameError: name 'article' is not defined",
+      "children" : [ {
+        "name" : "test_datawritetofile",
+        "uid" : "c3dd2dcea75a0a4b",
+        "parentUid" : "1b47c69cc26e609135d0fb99e2ea70d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629285280310,
+          "stop" : 1629285295308,
+          "duration" : 14998
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1b47c69cc26e609135d0fb99e2ea70d0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

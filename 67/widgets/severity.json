@@ -1,0 +1,101 @@
+[ {
+  "uid" : "4eb45f8ba3dd65db",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629285156014,
+    "stop" : 1629285172548,
+    "duration" : 16534
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33f564ecd10ae08d",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629285265207,
+    "stop" : 1629285280305,
+    "duration" : 15098
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "76d913773ac90db4",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629285112410,
+    "stop" : 1629285156011,
+    "duration" : 43601
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a6e784f53159645b",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629285081811,
+    "stop" : 1629285112407,
+    "duration" : 30596
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c3dd2dcea75a0a4b",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629285280310,
+    "stop" : 1629285295308,
+    "duration" : 14998
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1659242b8a72d45",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629285206014,
+    "stop" : 1629285226622,
+    "duration" : 20608
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "965cf839a043a1d4",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629285019985,
+    "stop" : 1629285054383,
+    "duration" : 34398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd56af7b528534cc",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629285054387,
+    "stop" : 1629285081808,
+    "duration" : 27421
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3341ab30cc1a8e08",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629285226628,
+    "stop" : 1629285265204,
+    "duration" : 38576
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd15ab3075c37a7d",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629285172551,
+    "stop" : 1629285205964,
+    "duration" : 33413
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

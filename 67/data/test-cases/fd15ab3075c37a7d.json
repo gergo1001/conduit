@@ -1,0 +1,286 @@
+{
+  "uid" : "fd15ab3075c37a7d",
+  "name" : "test_new_tittle_only_once",
+  "fullName" : "test_phyton.test_new_tittle_only_once#test_new_tittle_only_once",
+  "historyId" : "8080c046d6f8dda4b68b93625ad373df",
+  "time" : {
+    "start" : 1629285172551,
+    "stop" : 1629285205964,
+    "duration" : 33413
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>>(['XldzhHQNKV', 'PFZeBeQeLk', 'YcmyBleMzu'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>> = <pages.page_main.PageMain object at 0x7f6f119857c0>.none_repeat_tittle_from_list_article",
+  "statusTrace" : "def test_new_tittle_only_once():\n        p_main = m.PageMain()\n        p_main.open()\n        try:\n            p_signin = p_main.signinpage_open()\n            # tesztadatok\n            testemail = 'testuser1@example.com'\n            testpassw = 'Abcd123$'\n            testuser = 'testuser1'\n            # megadott teszt userrel belépés\n            p_signin.fill_inputs(testemail, testpassw)\n            p_signin.click_signin()\n            articles = []\n            tittles = []\n            tag = 'c'\n            #cikkeket generál\n            for _ in range(3):\n                tittle = f.random_title()\n                if tittle not in tittles:\n                    article = ca.Article(None, tittle, 'a', 'b', tag)\n                    articles.append(article)\n                    tittles.append(tittle)\n            for article in articles:\n                p_editor = p_main.newarticlepage_open()\n                p_editor.fill_inputs(article.gettitle(), article.shorttext, article.text, tag)\n                p_article = p_editor.click_publish()\n                article.setlink(p_article.geturl())\n                p_article.go_home()\n            #összegyűjti az összes cikket, és megnézi, hogy nincs ismétlé\n>           assert p_main.none_repeat_tittle_from_list_article(tittles) is True\nE           AssertionError: assert False is True\nE            +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>>(['XldzhHQNKV', 'PFZeBeQeLk', 'YcmyBleMzu'])\nE            +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>> = <pages.page_main.PageMain object at 0x7f6f119857c0>.none_repeat_tittle_from_list_article\n\ntest_phyton/test_new_tittle_only_once.py:35: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>>(['XldzhHQNKV', 'PFZeBeQeLk', 'YcmyBleMzu'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>> = <pages.page_main.PageMain object at 0x7f6f119857c0>.none_repeat_tittle_from_list_article",
+    "statusTrace" : "def test_new_tittle_only_once():\n        p_main = m.PageMain()\n        p_main.open()\n        try:\n            p_signin = p_main.signinpage_open()\n            # tesztadatok\n            testemail = 'testuser1@example.com'\n            testpassw = 'Abcd123$'\n            testuser = 'testuser1'\n            # megadott teszt userrel belépés\n            p_signin.fill_inputs(testemail, testpassw)\n            p_signin.click_signin()\n            articles = []\n            tittles = []\n            tag = 'c'\n            #cikkeket generál\n            for _ in range(3):\n                tittle = f.random_title()\n                if tittle not in tittles:\n                    article = ca.Article(None, tittle, 'a', 'b', tag)\n                    articles.append(article)\n                    tittles.append(tittle)\n            for article in articles:\n                p_editor = p_main.newarticlepage_open()\n                p_editor.fill_inputs(article.gettitle(), article.shorttext, article.text, tag)\n                p_article = p_editor.click_publish()\n                article.setlink(p_article.geturl())\n                p_article.go_home()\n            #összegyűjti az összes cikket, és megnézi, hogy nincs ismétlé\n>           assert p_main.none_repeat_tittle_from_list_article(tittles) is True\nE           AssertionError: assert False is True\nE            +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>>(['XldzhHQNKV', 'PFZeBeQeLk', 'YcmyBleMzu'])\nE            +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6f119857c0>> = <pages.page_main.PageMain object at 0x7f6f119857c0>.none_repeat_tittle_from_list_article\n\ntest_phyton/test_new_tittle_only_once.py:35: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b480976780bc6661",
+      "name" : "log",
+      "source" : "b480976780bc6661.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "4e71704b723986dd",
+      "name" : "stderr",
+      "source" : "4e71704b723986dd.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_phyton"
+  }, {
+    "name" : "suite",
+    "value" : "test_new_tittle_only_once"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-942"
+  }, {
+    "name" : "thread",
+    "value" : "3799-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_phyton.test_new_tittle_only_once"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 14,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 22
+      },
+      "items" : [ {
+        "uid" : "e7fd4cad7ed7f31c",
+        "reportUrl" : "https://gergo1001.github.io/conduit/66//#testresult/e7fd4cad7ed7f31c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fb74f7beb80>>(['PhUGgNhclq', 'yKyIHBvqRb', 'xuNCwEDONi'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fb74f7beb80>> = <pages.page_main.PageMain object at 0x7fb74f7beb80>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629284403031,
+          "stop" : 1629284436758,
+          "duration" : 33727
+        }
+      }, {
+        "uid" : "2f8754c486a4c0a3",
+        "reportUrl" : "https://gergo1001.github.io/conduit/65//#testresult/2f8754c486a4c0a3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa2149bed60>>(['LnhstCZJTd', 'CEQoMJVwxX', 'NzUvHHDEYr'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa2149bed60>> = <pages.page_main.PageMain object at 0x7fa2149bed60>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629283851037,
+          "stop" : 1629283885698,
+          "duration" : 34661
+        }
+      }, {
+        "uid" : "f1752c357fd393a7",
+        "reportUrl" : "https://gergo1001.github.io/conduit/64//#testresult/f1752c357fd393a7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fafb2a33400>>(['CRvlqcsTLt', 'rBAZFsoIFe', 'qQFQlPXOIj'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fafb2a33400>> = <pages.page_main.PageMain object at 0x7fafb2a33400>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629283811921,
+          "stop" : 1629283845871,
+          "duration" : 33950
+        }
+      }, {
+        "uid" : "d5dd90fcaadffddf",
+        "reportUrl" : "https://gergo1001.github.io/conduit/63//#testresult/d5dd90fcaadffddf",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6765b05a30>>(['rvonDRdJze', 'cyHEwmqkGi', 'wxDoWlqPgX'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f6765b05a30>> = <pages.page_main.PageMain object at 0x7f6765b05a30>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629232086400,
+          "stop" : 1629232121099,
+          "duration" : 34699
+        }
+      }, {
+        "uid" : "32a0f3d794a1c4fe",
+        "reportUrl" : "https://gergo1001.github.io/conduit/62//#testresult/32a0f3d794a1c4fe",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc5988dad00>>(['kUsUJCkRSm', 'XVQTZIrUPW', 'lKLmfgxpmF'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc5988dad00>> = <pages.page_main.PageMain object at 0x7fc5988dad00>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629229783133,
+          "stop" : 1629229817619,
+          "duration" : 34486
+        }
+      }, {
+        "uid" : "31d9122ac86a28be",
+        "reportUrl" : "https://gergo1001.github.io/conduit/61//#testresult/31d9122ac86a28be",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc9354c7d60>>(['cyjVCfuBwG', 'BeDmbkRsfl', 'ABZEtbIevc'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fc9354c7d60>> = <pages.page_main.PageMain object at 0x7fc9354c7d60>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629229157938,
+          "stop" : 1629229191796,
+          "duration" : 33858
+        }
+      }, {
+        "uid" : "6617e660bd166833",
+        "reportUrl" : "https://gergo1001.github.io/conduit/60//#testresult/6617e660bd166833",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f5999300730>>(['NdXLWEUjqS', 'pasYhAuOEE', 'oZuaHefblF'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f5999300730>> = <pages.page_main.PageMain object at 0x7f5999300730>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629225926455,
+          "stop" : 1629225960348,
+          "duration" : 33893
+        }
+      }, {
+        "uid" : "bf4702c808eef3c0",
+        "reportUrl" : "https://gergo1001.github.io/conduit/59//#testresult/bf4702c808eef3c0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f8e4217dd60>>(['vzuwwUSubE', 'IpkSFBAFCV', 'bvCTodCNKI'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f8e4217dd60>> = <pages.page_main.PageMain object at 0x7f8e4217dd60>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629224989015,
+          "stop" : 1629225023544,
+          "duration" : 34529
+        }
+      }, {
+        "uid" : "287f9ca1cd94ae63",
+        "reportUrl" : "https://gergo1001.github.io/conduit/58//#testresult/287f9ca1cd94ae63",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f8ea9cf3d90>>(['sUkCiEDnVq', 'QpvsXZznfZ', 'eUhziZSMTE'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f8ea9cf3d90>> = <pages.page_main.PageMain object at 0x7f8ea9cf3d90>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629224410967,
+          "stop" : 1629224445313,
+          "duration" : 34346
+        }
+      }, {
+        "uid" : "1cb7771a195cd4f8",
+        "reportUrl" : "https://gergo1001.github.io/conduit/57//#testresult/1cb7771a195cd4f8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa111b4f1f0>>(['NSIbzmNyjr', 'LPMOYYqGVT', 'oxatFpOUVv'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa111b4f1f0>> = <pages.page_main.PageMain object at 0x7fa111b4f1f0>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629223741792,
+          "stop" : 1629223777296,
+          "duration" : 35504
+        }
+      }, {
+        "uid" : "c11b6e740bb4028a",
+        "reportUrl" : "https://gergo1001.github.io/conduit/56//#testresult/c11b6e740bb4028a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f2ad102d0a0>>(['ABXrGMkdpU', 'ygXnoDVHuD', 'YPOVKkKVUf'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7f2ad102d0a0>> = <pages.page_main.PageMain object at 0x7f2ad102d0a0>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629194475029,
+          "stop" : 1629194505381,
+          "duration" : 30352
+        }
+      }, {
+        "uid" : "c387e52eb43aa816",
+        "reportUrl" : "https://gergo1001.github.io/conduit/55//#testresult/c387e52eb43aa816",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>>(['RsKgPodTMx', 'MPSLUXKGGO', 'bvyBtGsaIN'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fe5275f9ac0>> = <pages.page_main.PageMain object at 0x7fe5275f9ac0>.none_repeat_tittle_from_list_article",
+        "time" : {
+          "start" : 1629159366504,
+          "stop" : 1629159396808,
+          "duration" : 30304
+        }
+      }, {
+        "uid" : "a815e3450e3f70fa",
+        "reportUrl" : "https://gergo1001.github.io/conduit/54//#testresult/a815e3450e3f70fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158700231,
+          "stop" : 1629158741797,
+          "duration" : 41566
+        }
+      }, {
+        "uid" : "c4b1f71170ad62f1",
+        "reportUrl" : "https://gergo1001.github.io/conduit/53//#testresult/c4b1f71170ad62f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629158328205,
+          "stop" : 1629158370061,
+          "duration" : 41856
+        }
+      }, {
+        "uid" : "a22c401706b2e2b6",
+        "reportUrl" : "https://gergo1001.github.io/conduit/52//#testresult/a22c401706b2e2b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157799999,
+          "stop" : 1629157841723,
+          "duration" : 41724
+        }
+      }, {
+        "uid" : "329d7afec84b05eb",
+        "reportUrl" : "https://gergo1001.github.io/conduit/51//#testresult/329d7afec84b05eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629157347424,
+          "stop" : 1629157389154,
+          "duration" : 41730
+        }
+      }, {
+        "uid" : "3c503b9fddefa346",
+        "reportUrl" : "https://gergo1001.github.io/conduit/50//#testresult/3c503b9fddefa346",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629156936515,
+          "stop" : 1629156978939,
+          "duration" : 42424
+        }
+      }, {
+        "uid" : "1fa6b7a76d0d5270",
+        "reportUrl" : "https://gergo1001.github.io/conduit/49//#testresult/1fa6b7a76d0d5270",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629155421704,
+          "stop" : 1629155463175,
+          "duration" : 41471
+        }
+      }, {
+        "uid" : "d300c1f98674f802",
+        "reportUrl" : "https://gergo1001.github.io/conduit/47//#testresult/d300c1f98674f802",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629152497707,
+          "stop" : 1629152538227,
+          "duration" : 40520
+        }
+      }, {
+        "uid" : "2ee3f60fb6e3500a",
+        "reportUrl" : "https://gergo1001.github.io/conduit/45//#testresult/2ee3f60fb6e3500a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147717608,
+          "stop" : 1629147759023,
+          "duration" : 41415
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fd15ab3075c37a7d.json",
+  "parameterValues" : [ ]
+}

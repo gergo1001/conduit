@@ -1,0 +1,101 @@
+[ {
+  "uid" : "fc5f7e656bf5650d",
+  "name" : "test_datawritetofile",
+  "time" : {
+    "start" : 1629287892092,
+    "stop" : 1629287906813,
+    "duration" : 14721
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3bdbcc9efa1ae2ac",
+  "name" : "test_deletedata",
+  "time" : {
+    "start" : 1629287667996,
+    "stop" : 1629287695148,
+    "duration" : 27152
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f031c5417b4cf75b",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1629287838869,
+    "stop" : 1629287877305,
+    "duration" : 38436
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "be8bc843b6612c8c",
+  "name" : "test_inputdata",
+  "time" : {
+    "start" : 1629287725475,
+    "stop" : 1629287768327,
+    "duration" : 42852
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "173a0d9eac0cbdd3",
+  "name" : "test_moredata",
+  "time" : {
+    "start" : 1629287768330,
+    "stop" : 1629287784504,
+    "duration" : 16174
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a19f140a51be027",
+  "name" : "test_editdata",
+  "time" : {
+    "start" : 1629287695151,
+    "stop" : 1629287725472,
+    "duration" : 30321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "714e77a170dca6bb",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1629287634843,
+    "stop" : 1629287667993,
+    "duration" : 33150
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f66e8f2b1609d2ca",
+  "name" : "test_tittle_only_once",
+  "time" : {
+    "start" : 1629287877308,
+    "stop" : 1629287892088,
+    "duration" : 14780
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3df437037ab617e6",
+  "name" : "test_new_tittle_only_once",
+  "time" : {
+    "start" : 1629287784507,
+    "stop" : 1629287818367,
+    "duration" : 33860
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "78b2ed5374f95248",
+  "name" : "test_newdata",
+  "time" : {
+    "start" : 1629287818416,
+    "stop" : 1629287838863,
+    "duration" : 20447
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

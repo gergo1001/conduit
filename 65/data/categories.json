@@ -1,0 +1,81 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div/div[1]/div/div/span/button/span\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_inputdata",
+        "uid" : "d770e330893e174d",
+        "parentUid" : "6a02d976da01282475eb51cc2a81fc29",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629283779962,
+          "stop" : 1629283834582,
+          "duration" : 54620
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6a02d976da01282475eb51cc2a81fc29"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa2149bed60>>(['LnhstCZJTd', 'CEQoMJVwxX', 'NzUvHHDEYr'])\n +    where <bound method PageMain.none_repeat_tittle_from_list_article of <pages.page_main.PageMain object at 0x7fa2149bed60>> = <pages.page_main.PageMain object at 0x7fa2149bed60>.none_repeat_tittle_from_list_article",
+      "children" : [ {
+        "name" : "test_new_tittle_only_once",
+        "uid" : "2f8754c486a4c0a3",
+        "parentUid" : "40a8fa703a10667a8424dcd228b2090e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629283851037,
+          "stop" : 1629283885698,
+          "duration" : 34661
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "40a8fa703a10667a8424dcd228b2090e"
+    }, {
+      "name" : "AssertionError: assert 'dssss2' == 'dssss'\n  - dssss\n  + dssss2\n  ?      +",
+      "children" : [ {
+        "name" : "test_newdata",
+        "uid" : "3d809f9421b0120c",
+        "parentUid" : "9456d28f5f3c4a54e1e5c03d2cd29772",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629283885708,
+          "stop" : 1629283906540,
+          "duration" : 20832
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9456d28f5f3c4a54e1e5c03d2cd29772"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7fa2149c78b0>>()\n +    where <bound method PageMain.none_repeat_tittle of <pages.page_main.PageMain object at 0x7fa2149c78b0>> = <pages.page_main.PageMain object at 0x7fa2149c78b0>.none_repeat_tittle",
+      "children" : [ {
+        "name" : "test_tittle_only_once",
+        "uid" : "e13e3b717b11a983",
+        "parentUid" : "5de44865d6f1628d6551326ee7b597d6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629283945333,
+          "stop" : 1629283960403,
+          "duration" : 15070
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5de44865d6f1628d6551326ee7b597d6"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

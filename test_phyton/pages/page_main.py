@@ -257,7 +257,7 @@ class PageMain:
     def get_article(self, must_fillarticle):
         if must_fillarticle:
             self.fill_article()
-        return len(article)
+        return len(self.articles)
 
     def __del__(self):
         self.driver.quit()

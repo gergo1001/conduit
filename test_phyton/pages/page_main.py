@@ -193,6 +193,7 @@ class PageMain:
                 self.article_open(article.link)
                 p_article = a.PageArticle(self.driver)
                 p_article.delete_article()
+                time.sleep(1)
 
     def search_article_with_title(self, title):
         self.fill_article()

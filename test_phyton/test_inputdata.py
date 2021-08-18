@@ -33,8 +33,8 @@ def test_inputdata():
         assert upload_element_count == checked_upload
 
         # kitörtli a felvitt adatokat
-        for tittle in tittles:
-            p_main.del_article(tittle, False)
+        #for tittle in tittles:
+        #    p_main.del_article(tittle, False)
     finally:
         p_main.__del__()
 
